@@ -1,0 +1,275 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : AxIssues unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #AxIssues
+  PRIVATE
+  PROPERTIES
+    Name                #AxIssues
+    Origin              #{80A0DA69-D055-4AE4-8B83-E13330E1590E}
+  ENDPROPERTIES
+  
+    PROJECTCLASS 
+    GROUP #Data Dictionary
+      PROPERTIES
+        Name                #Data Dictionary
+        ProjectGroupType    #DataDictionary
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      GROUP #Tables
+        PROPERTIES
+          Name                #Tables
+          ProjectGroupType    #Tables
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          NODETYPE 204
+          NAME #AXI_Issues
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          NODETYPE 204
+          NAME #AXI_Projects
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          NODETYPE 204
+          NAME #AXI_Users
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          NODETYPE 204
+          NAME #AXI_ProjectMembers
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          NODETYPE 204
+          NAME #AXI_ProjectVersions
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          NODETYPE 204
+          NAME #AXI_IssuesRelations
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          NODETYPE 204
+          NAME #AXI_IssuesComments
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          NODETYPE 204
+          NAME #AXI_IssuesAttachments
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 44
+          NODETYPE 204
+          NAME #AXI_Parameters
+        ENDNODE
+        ENDGROUP
+        
+      GROUP #Extended Data Types
+        PROPERTIES
+          Name                #Extended Data Types
+          ProjectGroupType    #ExtendedDataTypes
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      GROUP #Base Enums
+        PROPERTIES
+          Name                #Base Enums
+          ProjectGroupType    #BaseEnums
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      GROUP #Views
+        PROPERTIES
+          Name                #Views
+          ProjectGroupType    #Views
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      ENDGROUP
+      
+    GROUP #Macros
+      PROPERTIES
+        Name                #Macros
+        ProjectGroupType    #Macros
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      ENDGROUP
+      
+    GROUP #Classes
+      PROPERTIES
+        Name                #Classes
+        ProjectGroupType    #Classes
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      ENDGROUP
+      
+    GROUP #Forms
+      PROPERTIES
+        Name                #Forms
+        ProjectGroupType    #Forms
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      ENDGROUP
+      
+    GROUP #Queries
+      PROPERTIES
+        Name                #Queries
+        ProjectGroupType    #Queries
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      ENDGROUP
+      
+    GROUP #Jobs
+      PROPERTIES
+        Name                #Jobs
+        ProjectGroupType    #Jobs
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      ENDGROUP
+      
+    GROUP #Menus
+      PROPERTIES
+        Name                #Menus
+        ProjectGroupType    #Menus
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      ENDGROUP
+      
+    GROUP #Menu Items
+      PROPERTIES
+        Name                #Menu Items
+        ProjectGroupType    #MenuItems
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      GROUP #Output
+        PROPERTIES
+          Name                #Output
+          ProjectGroupType    #Output
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      GROUP #Display
+        PROPERTIES
+          Name                #Display
+          ProjectGroupType    #Display
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      GROUP #Action
+        PROPERTIES
+          Name                #Action
+          ProjectGroupType    #Action
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      ENDGROUP
+      
+    GROUP #Security
+      PROPERTIES
+        Name                #Security
+        ProjectGroupType    #Security
+        GroupMask           #
+        PreventEditProperties #No
+      ENDPROPERTIES
+      
+      GROUP #Privileges
+        PROPERTIES
+          Name                #Privileges
+          ProjectGroupType    #SecurityPrivileges
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      GROUP #Duties
+        PROPERTIES
+          Name                #Duties
+          ProjectGroupType    #SecurityDuties
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      GROUP #Roles
+        PROPERTIES
+          Name                #Roles
+          ProjectGroupType    #SecurityRoles
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      GROUP #ProcessCycles
+        PROPERTIES
+          Name                #ProcessCycles
+          ProjectGroupType    #SecurityProcessCycles
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      ENDGROUP
+      
+  ENDPROJECT
+  
+
+***Element: END

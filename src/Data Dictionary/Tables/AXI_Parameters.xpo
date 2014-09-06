@@ -19,6 +19,18 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #Key
+        INT
+        PROPERTIES
+          Name                #Key
+          AllowEditOnCreate   #No
+          AllowEdit           #No
+          Visible             #No
+          Table               #AXI_Parameters
+          Origin              #{81F5CE27-2BA1-4AFB-90D5-85B0019947E9}
+          ExtendedDataType    #ParametersKey
+        ENDPROPERTIES
+        
     ENDFIELDS
     GROUPS
     ENDGROUPS

@@ -1,0 +1,30 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: UTS
+
+; Microsoft Dynamics AX String: AXI_ProjectCurrentVersion unloaded
+; --------------------------------------------------------------------------------
+  USERTYPEVERSION 6
+  
+  USERTYPE #AXI_ProjectCurrentVersion
+  STRING
+    PROPERTIES
+      Name                #AXI_ProjectCurrentVersion
+      Label               #Current version
+      Origin              #{8FC1F785-3CDC-45DD-B2D0-D0EB5BA3FA83}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+    ENDTYPEELEMENTS
+    
+    TYPEREFERENCES
+    ENDTYPEREFERENCES
+    
+    TYPELOOKUPS
+    ENDTYPELOOKUPS
+    
+  ENDUSERTYPE
+  
+
+***Element: END

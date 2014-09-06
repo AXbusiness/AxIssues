@@ -1,0 +1,37 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: UTI
+
+; Microsoft Dynamics AX Integer: AXI_IssueId unloaded
+; --------------------------------------------------------------------------------
+  USERTYPEVERSION 6
+  
+  USERTYPE #AXI_IssueId
+  INT
+    PROPERTIES
+      Name                #AXI_IssueId
+      Label               #Issue id
+      Origin              #{76C74A3D-4334-45EC-AD2E-C87722891831}
+      ReferenceTable      #AXI_Issues
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+    ENDTYPEELEMENTS
+    
+    TYPEREFERENCES
+    ENDTYPEREFERENCES
+    
+    TYPELOOKUPS
+      TYPELOOKUP LOOKUP
+      PROPERTIES
+        Table               #AXI_Issues
+        RelatedField        #IssueId
+      ENDPROPERTIES
+      
+    ENDTYPELOOKUPS
+    
+  ENDUSERTYPE
+  
+
+***Element: END

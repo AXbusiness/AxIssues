@@ -1,0 +1,58 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBE
+
+; Microsoft Dynamics AX Enumtype : AXI_IssueStatus unloaded
+; --------------------------------------------------------------------------------
+  ENUMTYPEVERSION 1
+  
+  ENUMTYPE #AXI_IssueStatus
+    PROPERTIES
+      Name                #AXI_IssueStatus
+      Label               #Status
+      UseEnumValue        #Yes
+      Origin              #{DC4AF7BF-59EA-4E72-849C-01F2FD015BF2}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+      #Unconfirmed
+      PROPERTIES
+        Name                #Unconfirmed
+        Label               #Unconfirmed
+        EnumValue           #0
+      ENDPROPERTIES
+      
+      #Confirmed
+      PROPERTIES
+        Name                #Confirmed
+        Label               #Confirmed
+        EnumValue           #1
+      ENDPROPERTIES
+      
+      #Assigned
+      PROPERTIES
+        Name                #Assigned
+        Label               #Assigned
+        EnumValue           #2
+      ENDPROPERTIES
+      
+      #Resolved
+      PROPERTIES
+        Name                #Resolved
+        Label               #Resolved
+        EnumValue           #3
+      ENDPROPERTIES
+      
+      #Verified
+      PROPERTIES
+        Name                #Verified
+        Label               #Verified
+        EnumValue           #4
+      ENDPROPERTIES
+      
+    ENDTYPEELEMENTS
+  ENDENUMTYPE
+  
+
+***Element: END

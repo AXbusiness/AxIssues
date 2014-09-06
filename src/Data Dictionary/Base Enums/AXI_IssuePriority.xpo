@@ -1,0 +1,50 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBE
+
+; Microsoft Dynamics AX Enumtype : AXI_IssuePriority unloaded
+; --------------------------------------------------------------------------------
+  ENUMTYPEVERSION 1
+  
+  ENUMTYPE #AXI_IssuePriority
+    PROPERTIES
+      Name                #AXI_IssuePriority
+      UseEnumValue        #Yes
+      Origin              #{94F37C43-1734-4F7B-9F5F-5B9D4C2D0A1F}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+      #Low
+      PROPERTIES
+        Name                #Low
+        Label               #Low
+        EnumValue           #0
+      ENDPROPERTIES
+      
+      #Normal
+      PROPERTIES
+        Name                #Normal
+        Label               #Normal
+        EnumValue           #1
+      ENDPROPERTIES
+      
+      #High
+      PROPERTIES
+        Name                #High
+        Label               #High
+        EnumValue           #2
+      ENDPROPERTIES
+      
+      #Highest
+      PROPERTIES
+        Name                #Highest
+        Label               #Highest
+        EnumValue           #3
+      ENDPROPERTIES
+      
+    ENDTYPEELEMENTS
+  ENDENUMTYPE
+  
+
+***Element: END

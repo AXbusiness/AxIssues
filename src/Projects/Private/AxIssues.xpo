@@ -95,6 +95,142 @@ Formatversion: 1
           PreventEditProperties #No
         ENDPROPERTIES
         
+        GROUP #Common
+          PROPERTIES
+            Name                #Common
+            ProjectGroupType    #ExtendedDataTypes
+            GroupMask           #
+            PreventEditProperties #No
+          ENDPROPERTIES
+          
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 256
+            NAME #AXI_CreatedDateTime
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_Title
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_Description
+          ENDNODE
+          ENDGROUP
+          
+        GROUP #Issues
+          PROPERTIES
+            Name                #Issues
+            ProjectGroupType    #ExtendedDataTypes
+            GroupMask           #
+            PreventEditProperties #No
+          ENDPROPERTIES
+          
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_IssueTitle
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_IssueDescription
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 232
+            NAME #AXI_IssueId
+          ENDNODE
+          ENDGROUP
+          
+        GROUP #Projects
+          PROPERTIES
+            Name                #Projects
+            ProjectGroupType    #ExtendedDataTypes
+            GroupMask           #
+            PreventEditProperties #No
+          ENDPROPERTIES
+          
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_ProjectCurrentVersion
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_ProjectDescription
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 232
+            NAME #AXI_ProjectId
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_ProjectName
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_ProjectVersion
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_ProjectVersionFixed
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_ProjectVersionFixInPlanned
+          ENDNODE
+          ENDGROUP
+          
+        GROUP #Users
+          PROPERTIES
+            Name                #Users
+            ProjectGroupType    #ExtendedDataTypes
+            GroupMask           #
+            PreventEditProperties #No
+          ENDPROPERTIES
+          
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_UserId
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_CreatedUserId
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_ReportedUserId
+          ENDNODE
+          ENDGROUP
+          
         ENDGROUP
         
       GROUP #Base Enums
@@ -105,6 +241,24 @@ Formatversion: 1
           PreventEditProperties #No
         ENDPROPERTIES
         
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 40
+          NODETYPE 209
+          NAME #AXI_IssuePriority
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 40
+          NODETYPE 209
+          NAME #AXI_IsueResolution
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 40
+          NODETYPE 209
+          NAME #AXI_IssueStatus
+        ENDNODE
         ENDGROUP
         
       GROUP #Views

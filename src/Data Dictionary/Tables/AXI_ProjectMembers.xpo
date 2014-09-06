@@ -19,6 +19,15 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #ProjectId
+        INT
+        PROPERTIES
+          Name                #ProjectId
+          Table               #AXI_ProjectMembers
+          Origin              #{0249573F-60E5-4560-BF27-1482DE90DE92}
+          ExtendedDataType    #AXI_ProjectId
+        ENDPROPERTIES
+        
     ENDFIELDS
     GROUPS
     ENDGROUPS

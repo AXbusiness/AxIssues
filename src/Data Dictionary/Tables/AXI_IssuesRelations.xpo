@@ -19,6 +19,15 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #IssueId
+        INT
+        PROPERTIES
+          Name                #IssueId
+          Table               #AXI_IssuesRelations
+          Origin              #{E31718D9-BB49-4570-9417-FF0CA99CCD3D}
+          ExtendedDataType    #AXI_IssueId
+        ENDPROPERTIES
+        
     ENDFIELDS
     GROUPS
     ENDGROUPS

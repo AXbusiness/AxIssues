@@ -19,6 +19,63 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #CreatedAt
+        DATETIME
+        PROPERTIES
+          Name                #CreatedAt
+          Table               #AXI_Projects
+          Origin              #{65743781-9A6C-49D1-B67E-6A5BE9D90705}
+          ExtendedDataType    #AXI_CreatedDateTime
+        ENDPROPERTIES
+        
+      FIELD #CreatedUserId
+        STRING
+        PROPERTIES
+          Name                #CreatedUserId
+          Table               #AXI_Projects
+          Origin              #{20A9FF6F-25F5-46F9-9A3D-6FF806A77D18}
+          ExtendedDataType    #AXI_CreatedUserId
+          StringSize          #8
+        ENDPROPERTIES
+        
+      FIELD #CurrentVersion
+        STRING
+        PROPERTIES
+          Name                #CurrentVersion
+          Table               #AXI_Projects
+          Origin              #{456DB861-2CEE-46D6-8652-BBF8CB9F2996}
+          ExtendedDataType    #AXI_ProjectCurrentVersion
+        ENDPROPERTIES
+        
+      FIELD #Description
+        STRING
+        PROPERTIES
+          Name                #Description
+          Table               #AXI_Projects
+          Origin              #{41EE2BE8-E24A-4574-92CF-94C9C000E538}
+          ExtendedDataType    #AXI_ProjectDescription
+          StringSize          #250
+        ENDPROPERTIES
+        
+      FIELD #Name
+        STRING
+        PROPERTIES
+          Name                #Name
+          Table               #AXI_Projects
+          Origin              #{21F64271-FC04-43FC-9610-2AA4032B6C75}
+          ExtendedDataType    #AXI_ProjectName
+          StringSize          #50
+        ENDPROPERTIES
+        
+      FIELD #ProjectId
+        INT
+        PROPERTIES
+          Name                #ProjectId
+          Table               #AXI_Projects
+          Origin              #{3273ED05-1CA5-483B-8380-04C0B26008A5}
+          ExtendedDataType    #AXI_ProjectId
+        ENDPROPERTIES
+        
     ENDFIELDS
     GROUPS
     ENDGROUPS

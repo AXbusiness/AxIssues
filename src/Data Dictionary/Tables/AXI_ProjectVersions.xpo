@@ -19,6 +19,24 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #ProjectId
+        INT
+        PROPERTIES
+          Name                #ProjectId
+          Table               #AXI_ProjectVersions
+          Origin              #{4CB23107-4C82-4FC9-98A2-A484CDD85593}
+          ExtendedDataType    #AXI_ProjectId
+        ENDPROPERTIES
+        
+      FIELD #Version
+        STRING
+        PROPERTIES
+          Name                #Version
+          Table               #AXI_ProjectVersions
+          Origin              #{39C21FEF-123E-4915-83EF-939103ABA568}
+          ExtendedDataType    #AXI_ProjectVersion
+        ENDPROPERTIES
+        
     ENDFIELDS
     GROUPS
     ENDGROUPS

@@ -1,0 +1,32 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: UTS
+
+; Microsoft Dynamics AX String: AXI_ReportedUserId unloaded
+; --------------------------------------------------------------------------------
+  USERTYPEVERSION 6
+  
+  USERTYPE #AXI_ReportedUserId
+  STRING
+    PROPERTIES
+      Name                #AXI_ReportedUserId
+      Label               #Reported by
+      Origin              #{04EAAD4A-3149-44C0-957C-5880DAE3E475}
+      Extends             #AXI_UserId
+      StringSize          #8
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+    ENDTYPEELEMENTS
+    
+    TYPEREFERENCES
+    ENDTYPEREFERENCES
+    
+    TYPELOOKUPS
+    ENDTYPELOOKUPS
+    
+  ENDUSERTYPE
+  
+
+***Element: END

@@ -19,6 +19,109 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #CreatedUserId
+        STRING
+        PROPERTIES
+          Name                #CreatedUserId
+          Table               #AXI_Issues
+          Origin              #{D6C862D4-D218-4F83-A801-86AF5FA8A3BF}
+          ExtendedDataType    #AXI_CreatedUserId
+          StringSize          #8
+        ENDPROPERTIES
+        
+      FIELD #Description
+        STRING
+        PROPERTIES
+          Name                #Description
+          Table               #AXI_Issues
+          Origin              #{2C2B747A-7582-4B93-B886-ED20460F9498}
+          ExtendedDataType    #AXI_IssueDescription
+          StringSize          #250
+        ENDPROPERTIES
+        
+      FIELD #IssueId
+        INT
+        PROPERTIES
+          Name                #IssueId
+          Table               #AXI_Issues
+          Origin              #{D3304131-9A91-4712-91D7-04268B13CED3}
+          ExtendedDataType    #AXI_IssueId
+        ENDPROPERTIES
+        
+      FIELD #Priority
+        ENUM
+        PROPERTIES
+          Name                #Priority
+          Table               #AXI_Issues
+          Origin              #{1C787E40-F9EC-4629-A09A-C34942DEB186}
+          EnumType            #AXI_IssuePriority
+        ENDPROPERTIES
+        
+      FIELD #ProjectId
+        INT
+        PROPERTIES
+          Name                #ProjectId
+          Table               #AXI_Issues
+          Origin              #{9075B74D-9F6C-4338-A7BC-4EB88C55057E}
+          ExtendedDataType    #AXI_ProjectId
+        ENDPROPERTIES
+        
+      FIELD #ReportedUserId
+        STRING
+        PROPERTIES
+          Name                #ReportedUserId
+          Table               #AXI_Issues
+          Origin              #{4B717589-58D0-4A29-95F0-87F653D480FD}
+          ExtendedDataType    #AXI_ReportedUserId
+          StringSize          #8
+        ENDPROPERTIES
+        
+      FIELD #Resolution
+        ENUM
+        PROPERTIES
+          Name                #Resolution
+          Table               #AXI_Issues
+          Origin              #{A6852774-C45E-4D3A-9DD6-2540F19B3E3F}
+          EnumType            #AXI_IsueResolution
+        ENDPROPERTIES
+        
+      FIELD #Status
+        ENUM
+        PROPERTIES
+          Name                #Status
+          Table               #AXI_Issues
+          Origin              #{5DB0B98D-3A9B-4430-88B0-51C40252193F}
+          EnumType            #AXI_IssueStatus
+        ENDPROPERTIES
+        
+      FIELD #Title
+        STRING
+        PROPERTIES
+          Name                #Title
+          Table               #AXI_Issues
+          Origin              #{4766EC8D-9B42-4840-A16A-ED9A7761C2D1}
+          ExtendedDataType    #AXI_IssueTitle
+          StringSize          #50
+        ENDPROPERTIES
+        
+      FIELD #VersionFixed
+        STRING
+        PROPERTIES
+          Name                #VersionFixed
+          Table               #AXI_Issues
+          Origin              #{7DEFE6EC-E7B6-411A-91FD-BB8BD753D3AA}
+          ExtendedDataType    #AXI_ProjectVersionFixed
+        ENDPROPERTIES
+        
+      FIELD #VersionFixInPlanned
+        STRING
+        PROPERTIES
+          Name                #VersionFixInPlanned
+          Table               #AXI_Issues
+          Origin              #{22799066-F56B-4FE7-A60E-D0AD262E447E}
+          ExtendedDataType    #AXI_ProjectVersionFixInPlanned
+        ENDPROPERTIES
+        
     ENDFIELDS
     GROUPS
     ENDGROUPS

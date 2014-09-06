@@ -1,0 +1,37 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: UTI
+
+; Microsoft Dynamics AX Integer: AXI_ProjectId unloaded
+; --------------------------------------------------------------------------------
+  USERTYPEVERSION 6
+  
+  USERTYPE #AXI_ProjectId
+  INT
+    PROPERTIES
+      Name                #AXI_ProjectId
+      Label               #Project id
+      Origin              #{3A74A677-0D64-4971-B937-6386DC7FF2C3}
+      ReferenceTable      #AXI_Projects
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+    ENDTYPEELEMENTS
+    
+    TYPEREFERENCES
+    ENDTYPEREFERENCES
+    
+    TYPELOOKUPS
+      TYPELOOKUP LOOKUP
+      PROPERTIES
+        Table               #AXI_Projects
+        RelatedField        #ProjectId
+      ENDPROPERTIES
+      
+    ENDTYPELOOKUPS
+    
+  ENDUSERTYPE
+  
+
+***Element: END

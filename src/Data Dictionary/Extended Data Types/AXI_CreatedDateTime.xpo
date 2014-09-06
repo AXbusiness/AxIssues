@@ -1,0 +1,30 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: UTZ
+
+; Microsoft Dynamics AX UtcDateTime: AXI_CreatedDateTime unloaded
+; --------------------------------------------------------------------------------
+  USERTYPEVERSION 6
+  
+  USERTYPE #AXI_CreatedDateTime
+  DATETIME
+    PROPERTIES
+      Name                #AXI_CreatedDateTime
+      Label               #Created at
+      Origin              #{0229F8BC-A0F6-40DB-AB1B-49FFB5335551}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+    ENDTYPEELEMENTS
+    
+    TYPEREFERENCES
+    ENDTYPEREFERENCES
+    
+    TYPELOOKUPS
+    ENDTYPELOOKUPS
+    
+  ENDUSERTYPE
+  
+
+***Element: END

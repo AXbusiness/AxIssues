@@ -1,0 +1,58 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBE
+
+; Microsoft Dynamics AX Enumtype : AXI_IsueResolution unloaded
+; --------------------------------------------------------------------------------
+  ENUMTYPEVERSION 1
+  
+  ENUMTYPE #AXI_IsueResolution
+    PROPERTIES
+      Name                #AXI_IsueResolution
+      Label               #Resolution
+      UseEnumValue        #Yes
+      Origin              #{4DD20039-C7B8-44E9-8E79-407071B0E5D1}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+      #Fixed
+      PROPERTIES
+        Name                #Fixed
+        Label               #Fixed
+        EnumValue           #0
+      ENDPROPERTIES
+      
+      #Duplicate
+      PROPERTIES
+        Name                #Duplicate
+        Label               #Duplicate
+        EnumValue           #1
+      ENDPROPERTIES
+      
+      #WontFix
+      PROPERTIES
+        Name                #WontFix
+        Label               #Won't fix
+        EnumValue           #2
+      ENDPROPERTIES
+      
+      #WorksForMe
+      PROPERTIES
+        Name                #WorksForMe
+        Label               #Works for me
+        EnumValue           #3
+      ENDPROPERTIES
+      
+      #Invalid
+      PROPERTIES
+        Name                #Invalid
+        Label               #Invalid
+        EnumValue           #4
+      ENDPROPERTIES
+      
+    ENDTYPEELEMENTS
+  ENDENUMTYPE
+  
+
+***Element: END

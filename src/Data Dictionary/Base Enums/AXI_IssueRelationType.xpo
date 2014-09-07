@@ -1,0 +1,43 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBE
+
+; Microsoft Dynamics AX Enumtype : AXI_IssueRelationType unloaded
+; --------------------------------------------------------------------------------
+  ENUMTYPEVERSION 1
+  
+  ENUMTYPE #AXI_IssueRelationType
+    PROPERTIES
+      Name                #AXI_IssueRelationType
+      UseEnumValue        #Yes
+      Origin              #{991F5D7E-8796-4C0E-A910-0755BF8F8D15}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+      #DependsOn
+      PROPERTIES
+        Name                #DependsOn
+        Label               #Depends on
+        EnumValue           #0
+      ENDPROPERTIES
+      
+      #Related
+      PROPERTIES
+        Name                #Related
+        Label               #Related to
+        EnumValue           #1
+      ENDPROPERTIES
+      
+      #Duplicate
+      PROPERTIES
+        Name                #Duplicate
+        Label               #Duplicate off
+        EnumValue           #2
+      ENDPROPERTIES
+      
+    ENDTYPEELEMENTS
+  ENDENUMTYPE
+  
+
+***Element: END

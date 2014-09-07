@@ -14,7 +14,7 @@ Formatversion: 1
     Origin              #{80A0DA69-D055-4AE4-8B83-E13330E1590E}
   ENDPROPERTIES
   
-    PROJECTCLASS 
+    PROJECTCLASS ProjectNode
     GROUP #Data Dictionary
       PROPERTIES
         Name                #Data Dictionary
@@ -119,6 +119,12 @@ Formatversion: 1
             FILETYPE 0
             UTILTYPE 41
             NODETYPE 234
+            NAME #AXI_Name
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
             NAME #AXI_Description
           ENDNODE
           ENDGROUP
@@ -131,6 +137,30 @@ Formatversion: 1
             PreventEditProperties #No
           ENDPROPERTIES
           
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 230
+            NAME #AXI_AttachmentData
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 232
+            NAME #AXI_AttachmentId
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_Comment
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 232
+            NAME #AXI_CommentId
+          ENDNODE
           BEGINNODE
             FILETYPE 0
             UTILTYPE 41
@@ -148,6 +178,12 @@ Formatversion: 1
             UTILTYPE 41
             NODETYPE 232
             NAME #AXI_IssueId
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 232
+            NAME #AXI_RelatedIssueId
           ENDNODE
           ENDGROUP
           
@@ -186,6 +222,18 @@ Formatversion: 1
           BEGINNODE
             FILETYPE 0
             UTILTYPE 41
+            NODETYPE 231
+            NAME #AXI_ProjectPlannedReleaseDate
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 231
+            NAME #AXI_ProjectReleaseDate
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
             NODETYPE 234
             NAME #AXI_ProjectVersion
           ENDNODE
@@ -201,6 +249,18 @@ Formatversion: 1
             NODETYPE 234
             NAME #AXI_ProjectVersionFixInPlanned
           ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_ProjectVersionName
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_ProjectVersionDescription
+          ENDNODE
           ENDGROUP
           
         GROUP #Users
@@ -215,19 +275,25 @@ Formatversion: 1
             FILETYPE 0
             UTILTYPE 41
             NODETYPE 234
-            NAME #AXI_UserId
+            NAME #AXI_CreatedUserId
           ENDNODE
           BEGINNODE
             FILETYPE 0
             UTILTYPE 41
-            NODETYPE 234
-            NAME #AXI_CreatedUserId
+            NODETYPE 228
+            NAME #AXI_IsAdmin
           ENDNODE
           BEGINNODE
             FILETYPE 0
             UTILTYPE 41
             NODETYPE 234
             NAME #AXI_ReportedUserId
+          ENDNODE
+          BEGINNODE
+            FILETYPE 0
+            UTILTYPE 41
+            NODETYPE 234
+            NAME #AXI_UserId
           ENDNODE
           ENDGROUP
           
@@ -241,6 +307,24 @@ Formatversion: 1
           PreventEditProperties #No
         ENDPROPERTIES
         
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 40
+          NODETYPE 209
+          NAME #AXI_FileType
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 40
+          NODETYPE 209
+          NAME #AXI_IssueRelationType
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 40
+          NODETYPE 209
+          NAME #AXI_ProjectRole
+        ENDNODE
         BEGINNODE
           FILETYPE 0
           UTILTYPE 40

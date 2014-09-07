@@ -19,6 +19,45 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #CreatedAt
+        DATETIME
+        PROPERTIES
+          Name                #CreatedAt
+          Table               #AXI_Users
+          Origin              #{8A22D010-FA77-494B-BDCA-4CE1CBF94BD3}
+          ExtendedDataType    #AXI_CreatedDateTime
+        ENDPROPERTIES
+        
+      FIELD #CreatedUserId
+        STRING
+        PROPERTIES
+          Name                #CreatedUserId
+          Table               #AXI_Users
+          Origin              #{2C358255-E111-41B9-AFF4-4B6A285D2C75}
+          ExtendedDataType    #AXI_CreatedUserId
+          StringSize          #8
+        ENDPROPERTIES
+        
+      FIELD #IsAdmin
+        ENUM
+        PROPERTIES
+          Name                #IsAdmin
+          Table               #AXI_Users
+          Origin              #{E3B2FBE8-FC68-4B4E-BB5C-FE58CEB3E83D}
+          ExtendedDataType    #AXI_IsAdmin
+          EnumType            #NoYes
+        ENDPROPERTIES
+        
+      FIELD #UserId
+        STRING
+        PROPERTIES
+          Name                #UserId
+          Table               #AXI_Users
+          Origin              #{3B2AFB19-987D-469D-B51C-8AE545572F49}
+          ExtendedDataType    #UserId
+          StringSize          #8
+        ENDPROPERTIES
+        
     ENDFIELDS
     GROUPS
     ENDGROUPS

@@ -1,0 +1,64 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBE
+
+; Microsoft Dynamics AX Enumtype : AXI_FileType unloaded
+; --------------------------------------------------------------------------------
+  ENUMTYPEVERSION 1
+  
+  ENUMTYPE #AXI_FileType
+    PROPERTIES
+      Name                #AXI_FileType
+      UseEnumValue        #Yes
+      Origin              #{888DDF61-5631-41EF-B4D3-C9CCDCDA9D80}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+      #Text
+      PROPERTIES
+        Name                #Text
+        Label               #Text
+        EnumValue           #0
+      ENDPROPERTIES
+      
+      #Picture
+      PROPERTIES
+        Name                #Picture
+        Label               #Picture
+        EnumValue           #1
+      ENDPROPERTIES
+      
+      #MSWord
+      PROPERTIES
+        Name                #MSWord
+        Label               #Microsoft Word
+        EnumValue           #2
+      ENDPROPERTIES
+      
+      #MSExcel
+      PROPERTIES
+        Name                #MSExcel
+        Label               #Microsoft Excel
+        EnumValue           #3
+      ENDPROPERTIES
+      
+      #MSPowerPoint
+      PROPERTIES
+        Name                #MSPowerPoint
+        Label               #Microsoft PowerPoint
+        EnumValue           #4
+      ENDPROPERTIES
+      
+      #Binary
+      PROPERTIES
+        Name                #Binary
+        Label               #Binary
+        EnumValue           #5
+      ENDPROPERTIES
+      
+    ENDTYPEELEMENTS
+  ENDENUMTYPE
+  
+
+***Element: END

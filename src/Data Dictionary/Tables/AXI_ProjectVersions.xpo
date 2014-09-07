@@ -19,6 +19,35 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #Description
+        STRING
+        PROPERTIES
+          Name                #Description
+          Table               #AXI_ProjectVersions
+          Origin              #{958E7B46-4FD8-4A3E-8149-35A4C048961E}
+          ExtendedDataType    #AXI_ProjectVersionDescription
+          StringSize          #250
+        ENDPROPERTIES
+        
+      FIELD #Name
+        STRING
+        PROPERTIES
+          Name                #Name
+          Table               #AXI_ProjectVersions
+          Origin              #{BE80853B-9EA6-4713-910B-5AFEEB9F85BE}
+          ExtendedDataType    #AXI_ProjectVersionName
+          StringSize          #50
+        ENDPROPERTIES
+        
+      FIELD #PlannedReleaseDate
+        DATE
+        PROPERTIES
+          Name                #PlannedReleaseDate
+          Table               #AXI_ProjectVersions
+          Origin              #{42E0515B-2345-44C2-829E-37560717E0A9}
+          ExtendedDataType    #AXI_ProjectPlannedReleaseDate
+        ENDPROPERTIES
+        
       FIELD #ProjectId
         INT
         PROPERTIES
@@ -26,6 +55,15 @@ Formatversion: 1
           Table               #AXI_ProjectVersions
           Origin              #{4CB23107-4C82-4FC9-98A2-A484CDD85593}
           ExtendedDataType    #AXI_ProjectId
+        ENDPROPERTIES
+        
+      FIELD #ReleaseDate
+        DATE
+        PROPERTIES
+          Name                #ReleaseDate
+          Table               #AXI_ProjectVersions
+          Origin              #{CDB2F825-035E-4339-BD6C-F2F8D994257B}
+          ExtendedDataType    #AXI_ProjectReleaseDate
         ENDPROPERTIES
         
       FIELD #Version

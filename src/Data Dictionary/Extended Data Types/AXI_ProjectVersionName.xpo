@@ -3,15 +3,15 @@ Formatversion: 1
 
 ***Element: UTS
 
-; Microsoft Dynamics AX String: AXI_ProjectName unloaded
+; Microsoft Dynamics AX String: AXI_ProjectVersionName unloaded
 ; --------------------------------------------------------------------------------
   USERTYPEVERSION 6
   
-  USERTYPE #AXI_ProjectName
+  USERTYPE #AXI_ProjectVersionName
   STRING
     PROPERTIES
-      Name                #AXI_ProjectName
-      Origin              #{859A717E-07EF-4CC2-835E-71E26A9119D9}
+      Name                #AXI_ProjectVersionName
+      Origin              #{E9075A5A-0D31-45AF-A5CC-BE5AA6A87FE2}
       Extends             #AXI_Name
       StringSize          #50
     ENDPROPERTIES

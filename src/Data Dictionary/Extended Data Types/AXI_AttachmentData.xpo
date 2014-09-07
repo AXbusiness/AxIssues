@@ -1,19 +1,18 @@
 ﻿Exportfile for AOT version 1.0 or later
 Formatversion: 1
 
-***Element: UTS
+***Element: UTQ
 
-; Microsoft Dynamics AX String: AXI_ProjectName unloaded
+; Microsoft Dynamics AX Container: AXI_AttachmentData unloaded
 ; --------------------------------------------------------------------------------
   USERTYPEVERSION 6
   
-  USERTYPE #AXI_ProjectName
-  STRING
+  USERTYPE #AXI_AttachmentData
+  QUEUE
     PROPERTIES
-      Name                #AXI_ProjectName
-      Origin              #{859A717E-07EF-4CC2-835E-71E26A9119D9}
-      Extends             #AXI_Name
-      StringSize          #50
+      Name                #AXI_AttachmentData
+      Label               #Data
+      Origin              #{CBD413FB-D4D4-4A2B-B976-4B92B2E1EE6A}
     ENDPROPERTIES
     
     TYPEELEMENTS

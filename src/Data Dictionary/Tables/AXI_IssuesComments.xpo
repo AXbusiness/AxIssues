@@ -19,6 +19,25 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #Comment
+        STRING
+        PROPERTIES
+          Name                #Comment
+          Table               #AXI_IssuesComments
+          Origin              #{FD981C6B-B8B0-4E04-B17E-0EB0A6C54D78}
+          ExtendedDataType    #AXI_Comment
+          StringSize          #(Memo)
+        ENDPROPERTIES
+        
+      FIELD #CommentId
+        INT
+        PROPERTIES
+          Name                #CommentId
+          Table               #AXI_IssuesComments
+          Origin              #{0B8DC5D7-DE25-4D54-ADD5-B579B6A4FAB9}
+          ExtendedDataType    #AXI_CommentId
+        ENDPROPERTIES
+        
       FIELD #IssueId
         INT
         PROPERTIES
@@ -33,6 +52,16 @@ Formatversion: 1
     ENDGROUPS
     
     INDICES
+      #AXI_IssuesCommentsIdx
+      PROPERTIES
+        Name                #AXI_IssuesCommentsIdx
+        Origin              #{F2A51C80-AC19-4860-99C7-ECEAEB4DDF33}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #CommentId
+      ENDINDEXFIELDS
+      
     ENDINDICES
     FULLTEXTINDICES
     ENDFULLTEXTINDICES

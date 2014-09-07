@@ -19,6 +19,25 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #CreatedAt
+        DATETIME
+        PROPERTIES
+          Name                #CreatedAt
+          Table               #AXI_IssuesRelations
+          Origin              #{1FC69089-307D-40A1-BA48-0BC418DB8D14}
+          ExtendedDataType    #AXI_CreatedDateTime
+        ENDPROPERTIES
+        
+      FIELD #CreatedUserId
+        STRING
+        PROPERTIES
+          Name                #CreatedUserId
+          Table               #AXI_IssuesRelations
+          Origin              #{1547AE49-4C03-4808-B3D8-923C13D7F3EB}
+          ExtendedDataType    #AXI_CreatedUserId
+          StringSize          #8
+        ENDPROPERTIES
+        
       FIELD #IssueId
         INT
         PROPERTIES
@@ -26,6 +45,24 @@ Formatversion: 1
           Table               #AXI_IssuesRelations
           Origin              #{E31718D9-BB49-4570-9417-FF0CA99CCD3D}
           ExtendedDataType    #AXI_IssueId
+        ENDPROPERTIES
+        
+      FIELD #RelatedIssueId
+        INT
+        PROPERTIES
+          Name                #RelatedIssueId
+          Table               #AXI_IssuesRelations
+          Origin              #{02BDFEA3-CF2C-4D60-B260-393C805D7261}
+          ExtendedDataType    #AXI_RelatedIssueId
+        ENDPROPERTIES
+        
+      FIELD #Type
+        ENUM
+        PROPERTIES
+          Name                #Type
+          Table               #AXI_IssuesRelations
+          Origin              #{CC8449A0-771B-4EC6-A8E7-18CF8BEA08D7}
+          EnumType            #AXI_IssueRelationType
         ENDPROPERTIES
         
     ENDFIELDS

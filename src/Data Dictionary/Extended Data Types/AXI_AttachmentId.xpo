@@ -1,19 +1,19 @@
 ﻿Exportfile for AOT version 1.0 or later
 Formatversion: 1
 
-***Element: UTS
+***Element: UTI
 
-; Microsoft Dynamics AX String: AXI_ProjectVersion unloaded
+; Microsoft Dynamics AX Integer: AXI_AttachmentId unloaded
 ; --------------------------------------------------------------------------------
   USERTYPEVERSION 6
   
-  USERTYPE #AXI_ProjectVersion
-  STRING
+  USERTYPE #AXI_AttachmentId
+  INT
     PROPERTIES
-      Name                #AXI_ProjectVersion
-      Label               #Version
-      Origin              #{F7B04CDA-5283-4F03-B81C-3CA50B121F31}
-      ReferenceTable      #AXI_ProjectVersions
+      Name                #AXI_AttachmentId
+      Label               #Attachment id
+      Origin              #{746E26B7-5F31-4F13-80B1-178585DCF865}
+      ReferenceTable      #AXI_IssuesAttachments
     ENDPROPERTIES
     
     TYPEELEMENTS
@@ -25,8 +25,8 @@ Formatversion: 1
     TYPELOOKUPS
       TYPELOOKUP LOOKUP
       PROPERTIES
-        Table               #AXI_ProjectVersions
-        RelatedField        #Version
+        Table               #AXI_IssuesAttachments
+        RelatedField        #AttachmentId
       ENDPROPERTIES
       
     ENDTYPELOOKUPS

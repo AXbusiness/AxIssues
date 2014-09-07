@@ -19,6 +19,33 @@ Formatversion: 1
     ENDPROPERTIES
     
     FIELDS
+      FIELD #AttachmentId
+        INT
+        PROPERTIES
+          Name                #AttachmentId
+          Table               #AXI_IssuesAttachments
+          Origin              #{903D7311-6135-4894-99A7-A2659C037347}
+          ExtendedDataType    #AXI_AttachmentId
+        ENDPROPERTIES
+        
+      FIELD #Data
+        QUEUE
+        PROPERTIES
+          Name                #Data
+          Table               #AXI_IssuesAttachments
+          Origin              #{3953D59A-A9E5-4A58-9919-55C9241D294D}
+          ExtendedDataType    #AXI_AttachmentData
+        ENDPROPERTIES
+        
+      FIELD #FileType
+        ENUM
+        PROPERTIES
+          Name                #FileType
+          Table               #AXI_IssuesAttachments
+          Origin              #{1D995DC2-CFEF-4149-83A4-94B8718553B1}
+          EnumType            #AXI_FileType
+        ENDPROPERTIES
+        
       FIELD #IssueId
         INT
         PROPERTIES

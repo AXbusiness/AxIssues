@@ -28,6 +28,25 @@ Formatversion: 1
           ExtendedDataType    #AXI_ProjectId
         ENDPROPERTIES
         
+      FIELD #Role
+        ENUM
+        PROPERTIES
+          Name                #Role
+          Table               #AXI_ProjectMembers
+          Origin              #{0803DEB7-331D-423E-A0AD-6F21146103BC}
+          EnumType            #AXI_ProjectRole
+        ENDPROPERTIES
+        
+      FIELD #UserId
+        STRING
+        PROPERTIES
+          Name                #UserId
+          Table               #AXI_ProjectMembers
+          Origin              #{2FD5141C-3933-4E6A-B26A-5E7F4DC41585}
+          ExtendedDataType    #UserId
+          StringSize          #8
+        ENDPROPERTIES
+        
     ENDFIELDS
     GROUPS
     ENDGROUPS

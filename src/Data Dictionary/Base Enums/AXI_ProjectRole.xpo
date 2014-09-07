@@ -1,0 +1,43 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBE
+
+; Microsoft Dynamics AX Enumtype : AXI_ProjectRole unloaded
+; --------------------------------------------------------------------------------
+  ENUMTYPEVERSION 1
+  
+  ENUMTYPE #AXI_ProjectRole
+    PROPERTIES
+      Name                #AXI_ProjectRole
+      UseEnumValue        #Yes
+      Origin              #{DF4AA838-1B9F-4248-BAFF-71BD046386AB}
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+      #ProjectOwner
+      PROPERTIES
+        Name                #ProjectOwner
+        Label               #Project owner
+        EnumValue           #0
+      ENDPROPERTIES
+      
+      #ProjectMember
+      PROPERTIES
+        Name                #ProjectMember
+        Label               #Project member
+        EnumValue           #1
+      ENDPROPERTIES
+      
+      #Guest
+      PROPERTIES
+        Name                #Guest
+        Label               #Guest
+        EnumValue           #2
+      ENDPROPERTIES
+      
+    ENDTYPEELEMENTS
+  ENDENUMTYPE
+  
+
+***Element: END

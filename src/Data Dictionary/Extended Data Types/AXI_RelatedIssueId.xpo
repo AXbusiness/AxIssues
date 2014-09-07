@@ -1,19 +1,19 @@
 ﻿Exportfile for AOT version 1.0 or later
 Formatversion: 1
 
-***Element: UTS
+***Element: UTI
 
-; Microsoft Dynamics AX String: AXI_ProjectName unloaded
+; Microsoft Dynamics AX Integer: AXI_RelatedIssueId unloaded
 ; --------------------------------------------------------------------------------
   USERTYPEVERSION 6
   
-  USERTYPE #AXI_ProjectName
-  STRING
+  USERTYPE #AXI_RelatedIssueId
+  INT
     PROPERTIES
-      Name                #AXI_ProjectName
-      Origin              #{859A717E-07EF-4CC2-835E-71E26A9119D9}
-      Extends             #AXI_Name
-      StringSize          #50
+      Name                #AXI_RelatedIssueId
+      Label               #Related issue id
+      Origin              #{5C83E570-3FBE-453E-9F1D-AFF8B5A307EF}
+      Extends             #AXI_IssueId
     ENDPROPERTIES
     
     TYPEELEMENTS

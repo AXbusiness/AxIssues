@@ -1,19 +1,19 @@
 ﻿Exportfile for AOT version 1.0 or later
 Formatversion: 1
 
-***Element: UTS
+***Element: UTE
 
-; Microsoft Dynamics AX String: AXI_ProjectName unloaded
+; Microsoft Dynamics AX Enum: AXI_IsAdmin unloaded
 ; --------------------------------------------------------------------------------
   USERTYPEVERSION 6
   
-  USERTYPE #AXI_ProjectName
-  STRING
+  USERTYPE #AXI_IsAdmin
+  ENUM
     PROPERTIES
-      Name                #AXI_ProjectName
-      Origin              #{859A717E-07EF-4CC2-835E-71E26A9119D9}
-      Extends             #AXI_Name
-      StringSize          #50
+      Name                #AXI_IsAdmin
+      Label               #Is Admin
+      Origin              #{1F66F3BD-5DF0-4870-BD72-22F2739A34BF}
+      EnumType            #NoYes
     ENDPROPERTIES
     
     TYPEELEMENTS

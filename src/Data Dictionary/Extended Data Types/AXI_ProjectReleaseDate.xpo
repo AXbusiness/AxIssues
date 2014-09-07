@@ -1,19 +1,19 @@
 ﻿Exportfile for AOT version 1.0 or later
 Formatversion: 1
 
-***Element: UTS
+***Element: UTD
 
-; Microsoft Dynamics AX String: AXI_ProjectName unloaded
+; Microsoft Dynamics AX Date: AXI_ProjectReleaseDate unloaded
 ; --------------------------------------------------------------------------------
   USERTYPEVERSION 6
   
-  USERTYPE #AXI_ProjectName
-  STRING
+  USERTYPE #AXI_ProjectReleaseDate
+  DATE
     PROPERTIES
-      Name                #AXI_ProjectName
-      Origin              #{859A717E-07EF-4CC2-835E-71E26A9119D9}
-      Extends             #AXI_Name
-      StringSize          #50
+      Name                #AXI_ProjectReleaseDate
+      Label               #Release date
+      Origin              #{30DC09C7-7529-4DA0-ACF3-4A3022F1B969}
+      Extends             #TransDate
     ENDPROPERTIES
     
     TYPEELEMENTS

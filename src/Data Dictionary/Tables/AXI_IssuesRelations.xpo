@@ -12,32 +12,20 @@ Formatversion: 1
     PROPERTIES
       Name                #AXI_IssuesRelations
       Label               #Issue relationships
+      TitleField1         #IssueId
+      TitleField2         #RelatedIssueId
       CreateRecIdIndex    #Yes
       PrimaryIndex        #SurrogateKey
       ClusterIndex        #SurrogateKey
+      ModifiedDateTime    #Yes
+      ModifiedBy          #Yes
+      CreatedDateTime     #Yes
+      CreatedBy           #Yes
+      DeveloperDocumentation  #The AXI_IssuesRelations table contains relations between various issues.
       Origin              #{5A9D6DD3-8FD0-464D-8428-9A99AFB18277}
     ENDPROPERTIES
     
     FIELDS
-      FIELD #CreatedAt
-        DATETIME
-        PROPERTIES
-          Name                #CreatedAt
-          Table               #AXI_IssuesRelations
-          Origin              #{1FC69089-307D-40A1-BA48-0BC418DB8D14}
-          ExtendedDataType    #AXI_CreatedDateTime
-        ENDPROPERTIES
-        
-      FIELD #CreatedUserId
-        STRING
-        PROPERTIES
-          Name                #CreatedUserId
-          Table               #AXI_IssuesRelations
-          Origin              #{1547AE49-4C03-4808-B3D8-923C13D7F3EB}
-          ExtendedDataType    #AXI_CreatedUserId
-          StringSize          #8
-        ENDPROPERTIES
-        
       FIELD #IssueId
         INT
         PROPERTIES
@@ -67,9 +55,34 @@ Formatversion: 1
         
     ENDFIELDS
     GROUPS
+      GROUP #GridOverview
+        PROPERTIES
+          Name                #GridOverview
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #IssueId
+          #Type
+          #RelatedIssueId
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES
+      #IdentificationIdx
+      PROPERTIES
+        Name                #IdentificationIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{A20C4020-50EF-4A57-857B-69F3F07EDE10}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #IssueId
+        #RelatedIssueId
+        #Type
+      ENDINDEXFIELDS
+      
     ENDINDICES
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
@@ -82,7 +95,7 @@ Formatversion: 1
     METHODS
       SOURCE #_TableDescription
         #/// <summary>
-        #///     Table stores issue relationships.
+        #///     The AXI_IssuesRelations table contains relations between various issues.
         #/// </summary>
         #///
         #/// <remarks>

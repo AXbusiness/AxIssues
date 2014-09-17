@@ -1,0 +1,22 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : AXI_Users unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #AXI_Users
+    Type: 1
+    PROPERTIES
+      Name                #AXI_Users
+      Label               #Users
+      Object              #AXI_Users
+      Origin              #{05AA469D-0EEA-4CDF-B134-4A4ADD1DBB64}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

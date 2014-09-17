@@ -12,32 +12,20 @@ Formatversion: 1
     PROPERTIES
       Name                #AXI_Projects
       Label               #Projects
+      TitleField1         #ProjectId
+      TitleField2         #Name
       CreateRecIdIndex    #Yes
-      PrimaryIndex        #SurrogateKey
+      PrimaryIndex        #IdentificationIdx
       ClusterIndex        #SurrogateKey
+      ModifiedDateTime    #Yes
+      ModifiedBy          #Yes
+      CreatedDateTime     #Yes
+      CreatedBy           #Yes
+      DeveloperDocumentation  #The AXI_Projects table contains project definitions.
       Origin              #{7A5015D5-A5BF-4C83-8FFB-91795D1A2307}
     ENDPROPERTIES
     
     FIELDS
-      FIELD #CreatedAt
-        DATETIME
-        PROPERTIES
-          Name                #CreatedAt
-          Table               #AXI_Projects
-          Origin              #{65743781-9A6C-49D1-B67E-6A5BE9D90705}
-          ExtendedDataType    #AXI_CreatedDateTime
-        ENDPROPERTIES
-        
-      FIELD #CreatedUserId
-        STRING
-        PROPERTIES
-          Name                #CreatedUserId
-          Table               #AXI_Projects
-          Origin              #{20A9FF6F-25F5-46F9-9A3D-6FF806A77D18}
-          ExtendedDataType    #AXI_CreatedUserId
-          StringSize          #8
-        ENDPROPERTIES
-        
       FIELD #CurrentVersion
         STRING
         PROPERTIES
@@ -78,9 +66,41 @@ Formatversion: 1
         
     ENDFIELDS
     GROUPS
+      GROUP #AutoIdentification
+        PROPERTIES
+          Name                #AutoIdentification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #ProjectId
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #GridOverview
+        PROPERTIES
+          Name                #GridOverview
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #ProjectId
+          #Name
+          #CurrentVersion
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES
+      #IdentificationIdx
+      PROPERTIES
+        Name                #IdentificationIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{E9FD7408-FD03-4C5C-B37B-49C3106FC74F}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #ProjectId
+      ENDINDEXFIELDS
+      
     ENDINDICES
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
@@ -93,7 +113,7 @@ Formatversion: 1
     METHODS
       SOURCE #_TableDescription
         #/// <summary>
-        #///     Table stores projects.
+        #///     The AXI_Projects table contains project definitions.
         #/// </summary>
         #///
         #/// <remarks>

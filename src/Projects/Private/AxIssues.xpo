@@ -106,12 +106,6 @@ Formatversion: 1
           BEGINNODE
             FILETYPE 0
             UTILTYPE 41
-            NODETYPE 256
-            NAME #AXI_CreatedDateTime
-          ENDNODE
-          BEGINNODE
-            FILETYPE 0
-            UTILTYPE 41
             NODETYPE 234
             NAME #AXI_Title
           ENDNODE
@@ -274,12 +268,6 @@ Formatversion: 1
           BEGINNODE
             FILETYPE 0
             UTILTYPE 41
-            NODETYPE 234
-            NAME #AXI_CreatedUserId
-          ENDNODE
-          BEGINNODE
-            FILETYPE 0
-            UTILTYPE 41
             NODETYPE 228
             NAME #AXI_IsAdmin
           ENDNODE
@@ -385,6 +373,12 @@ Formatversion: 1
         PreventEditProperties #No
       ENDPROPERTIES
       
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
+        NAME #AXI_Users
+      ENDNODE
       ENDGROUP
       
     GROUP #Queries
@@ -415,6 +409,22 @@ Formatversion: 1
         PreventEditProperties #No
       ENDPROPERTIES
       
+      GROUP #Don't forget to add following menu to MainMenu !
+        PROPERTIES
+          Name                #Don't forget to add following menu to MainMenu !
+          ProjectGroupType    #All
+          GroupMask           #
+          PreventEditProperties #No
+        ENDPROPERTIES
+        
+        ENDGROUP
+        
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 16
+        NODETYPE 205
+        NAME #AXI_AxIssues
+      ENDNODE
       ENDGROUP
       
     GROUP #Menu Items
@@ -443,6 +453,12 @@ Formatversion: 1
           PreventEditProperties #No
         ENDPROPERTIES
         
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 1
+          NODETYPE 296
+          NAME #AXI_Users
+        ENDNODE
         ENDGROUP
         
       GROUP #Action

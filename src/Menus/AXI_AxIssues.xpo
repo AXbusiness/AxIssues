@@ -1,0 +1,80 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: MNU
+
+; Microsoft Dynamics AX Menu : AXI_AxIssues unloaded
+; --------------------------------------------------------------------------------
+  MNUVERSION 5
+  
+  MENU #AXI_AxIssues
+    PROPERTIES
+      Name                #AXI_AxIssues
+      Label               #AX Issues
+      SetCompany          #Yes
+      NormalImage         #3462
+      ImageLocation       #EmbeddedResource
+      Origin              #{45D93E12-2F9B-4D09-AB69-C03A0D163D8C}
+    ENDPROPERTIES
+    
+    MENU #@SYS333846
+      PROPERTIES
+        Name                #Common
+        Label               #@SYS333846
+        NormalImage         #3495
+        ImageLocation       #EmbeddedResource
+        Origin              #{81A38BA3-5433-431E-BEEF-83D7F3C4CFD9}
+      ENDPROPERTIES
+      
+    ENDMENU
+    MENU #@SYS333856
+      PROPERTIES
+        Name                #Inquiries
+        Label               #@SYS333856
+        NormalImage         #3474
+        ImageLocation       #EmbeddedResource
+        Origin              #{6A964506-EA3A-4635-89E4-C578D7D658BD}
+      ENDPROPERTIES
+      
+    ENDMENU
+    MENU #@SYS333860
+      PROPERTIES
+        Name                #Reports
+        Label               #@SYS333860
+        NormalImage         #3477
+        ImageLocation       #EmbeddedResource
+        Origin              #{3898BEAA-F958-4981-8A7E-0185DF648DA5}
+      ENDPROPERTIES
+      
+    ENDMENU
+    MENU #@SYS333865
+      PROPERTIES
+        Name                #Periodic
+        Label               #@SYS333865
+        NormalImage         #3476
+        ImageLocation       #EmbeddedResource
+        Origin              #{4A08FA85-FFDD-48A9-8A5A-8362CBFBE0D5}
+      ENDPROPERTIES
+      
+    ENDMENU
+    MENU #@SYS333869
+      PROPERTIES
+        Name                #Setup
+        Label               #@SYS333869
+        NormalImage         #3478
+        ImageLocation       #EmbeddedResource
+        Origin              #{A5EA2F6E-A066-4778-805D-FCC8825C3B83}
+      ENDPROPERTIES
+      
+      MENUITEM
+        PROPERTIES
+          Name                #Users
+          MenuItemName        #AXI_Users
+        ENDPROPERTIES
+        
+      ENDMENUITEM
+    ENDMENU
+  ENDMENU
+  
+
+***Element: END

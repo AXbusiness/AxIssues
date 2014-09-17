@@ -12,32 +12,21 @@ Formatversion: 1
     PROPERTIES
       Name                #AXI_Users
       Label               #Users
+      TitleField1         #UserId
+      TitleField2         #IsAdmin
       CreateRecIdIndex    #Yes
-      PrimaryIndex        #SurrogateKey
+      SaveDataPerCompany  #No
+      PrimaryIndex        #IdentificationIdx
       ClusterIndex        #SurrogateKey
+      ModifiedDateTime    #Yes
+      ModifiedBy          #Yes
+      CreatedDateTime     #Yes
+      CreatedBy           #Yes
+      DeveloperDocumentation  #The AXI_Users table contains Dynamics AX System users, which are enabled for AxIssues AddOn.
       Origin              #{54CDDA35-81D2-41D3-94DA-8FCE66C53A24}
     ENDPROPERTIES
     
     FIELDS
-      FIELD #CreatedAt
-        DATETIME
-        PROPERTIES
-          Name                #CreatedAt
-          Table               #AXI_Users
-          Origin              #{8A22D010-FA77-494B-BDCA-4CE1CBF94BD3}
-          ExtendedDataType    #AXI_CreatedDateTime
-        ENDPROPERTIES
-        
-      FIELD #CreatedUserId
-        STRING
-        PROPERTIES
-          Name                #CreatedUserId
-          Table               #AXI_Users
-          Origin              #{2C358255-E111-41B9-AFF4-4B6A285D2C75}
-          ExtendedDataType    #AXI_CreatedUserId
-          StringSize          #8
-        ENDPROPERTIES
-        
       FIELD #IsAdmin
         ENUM
         PROPERTIES
@@ -60,9 +49,42 @@ Formatversion: 1
         
     ENDFIELDS
     GROUPS
+      GROUP #AutoIdentification
+        PROPERTIES
+          Name                #AutoIdentification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #UserId
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #GridOverview
+        PROPERTIES
+          Name                #GridOverview
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #UserId
+          #displayUsername
+          #IsAdmin
+          #createdDateTime
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES
+      #IdentificationIdx
+      PROPERTIES
+        Name                #IdentificationIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{66E14564-3537-4D38-939B-8F9BBE3D0B38}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #UserId
+      ENDINDEXFIELDS
+      
     ENDINDICES
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
@@ -75,7 +97,7 @@ Formatversion: 1
     METHODS
       SOURCE #_TableDescription
         #/// <summary>
-        #///     Table stores users enables to work on issues.
+        #///     The AXI_Users table contains Dynamics AX System users, which are enabled for AxIssues AddOn.
         #/// </summary>
         #///
         #/// <remarks>
@@ -113,6 +135,18 @@ Formatversion: 1
         #/// </remarks>
         #private void _TableDescription()
         #{
+        #}
+      ENDSOURCE
+      SOURCE #displayUsername
+        #display UserName displayUsername()
+        #{
+        #    UserInfo userInfo;
+        #    ;
+        #
+        #    select firstOnly userInfo
+        #        where userInfo.id == this.UserId;
+        #
+        #    return userInfo.name;
         #}
       ENDSOURCE
     ENDMETHODS

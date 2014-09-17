@@ -12,23 +12,20 @@ Formatversion: 1
     PROPERTIES
       Name                #AXI_Issues
       Label               #Issues
+      TitleField1         #IssueId
+      TitleField2         #Title
       CreateRecIdIndex    #Yes
-      PrimaryIndex        #SurrogateKey
+      PrimaryIndex        #IdentificationIdx
       ClusterIndex        #SurrogateKey
+      ModifiedDateTime    #Yes
+      ModifiedBy          #Yes
+      CreatedDateTime     #Yes
+      CreatedBy           #Yes
+      DeveloperDocumentation  #The AXI_Issues table contains list of issues.
       Origin              #{C46ED7DA-E233-43AA-84E2-AAED36F393D8}
     ENDPROPERTIES
     
     FIELDS
-      FIELD #CreatedUserId
-        STRING
-        PROPERTIES
-          Name                #CreatedUserId
-          Table               #AXI_Issues
-          Origin              #{D6C862D4-D218-4F83-A801-86AF5FA8A3BF}
-          ExtendedDataType    #AXI_CreatedUserId
-          StringSize          #8
-        ENDPROPERTIES
-        
       FIELD #Description
         STRING
         PROPERTIES
@@ -124,9 +121,45 @@ Formatversion: 1
         
     ENDFIELDS
     GROUPS
+      GROUP #AutoIdentification
+        PROPERTIES
+          Name                #AutoIdentification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #IssueId
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #GridOverview
+        PROPERTIES
+          Name                #GridOverview
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #IssueId
+          #Title
+          #ReportedUserId
+          #Status
+          #Resolution
+          #Priority
+          #ProjectId
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES
+      #IdentificationIdx
+      PROPERTIES
+        Name                #IdentificationIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{7A1DF6DF-B51B-4F58-9F96-DB0FEF7EAF2E}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #IssueId
+      ENDINDEXFIELDS
+      
     ENDINDICES
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
@@ -139,7 +172,7 @@ Formatversion: 1
     METHODS
       SOURCE #_TableDescription
         #/// <summary>
-        #///     Table stores issues.
+        #///     The AXI_Issues table contains list of issues.
         #/// </summary>
         #///
         #/// <remarks>

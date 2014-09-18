@@ -15,6 +15,11 @@ Formatversion: 1
       CreateRecIdIndex    #Yes
       PrimaryIndex        #SurrogateKey
       ClusterIndex        #SurrogateKey
+      ModifiedDateTime    #Yes
+      ModifiedBy          #Yes
+      CreatedDateTime     #Yes
+      CreatedBy           #Yes
+      DeveloperDocumentation  #The AXI_ProjectMembers table contains members associated to a project.
       Origin              #{757630E5-9CBB-4C79-9DE8-920F55A28AD9}
     ENDPROPERTIES
     
@@ -23,6 +28,7 @@ Formatversion: 1
         INT
         PROPERTIES
           Name                #ProjectId
+          Mandatory           #Yes
           Table               #AXI_ProjectMembers
           Origin              #{0249573F-60E5-4560-BF27-1482DE90DE92}
           ExtendedDataType    #AXI_ProjectId
@@ -41,6 +47,7 @@ Formatversion: 1
         STRING
         PROPERTIES
           Name                #UserId
+          Mandatory           #Yes
           Table               #AXI_ProjectMembers
           Origin              #{2FD5141C-3933-4E6A-B26A-5E7F4DC41585}
           ExtendedDataType    #UserId
@@ -49,13 +56,55 @@ Formatversion: 1
         
     ENDFIELDS
     GROUPS
+      GROUP #GridOverview
+        PROPERTIES
+          Name                #GridOverview
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #UserId
+          #Role
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES
+      #IdentificationIdx
+      PROPERTIES
+        Name                #IdentificationIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{6F509006-0AB5-4E31-9E50-66EFAEDB0F37}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #ProjectId
+        #UserId
+        #Role
+      ENDINDEXFIELDS
+      
     ENDINDICES
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
     REFERENCES
+      REFERENCE #AXI_Projects
+        PROPERTIES
+          Name                #AXI_Projects
+          Table               #AXI_Projects
+          RelatedTableCardinality   #ZeroOne
+          RelationshipType    #Association
+          UseDefaultRoleNames #Yes
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE NORMAL
+          PROPERTIES
+            Field               #ProjectId
+            RelatedField        #ProjectId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
     ENDREFERENCES
     
     DELETEACTIONS
@@ -64,7 +113,7 @@ Formatversion: 1
     METHODS
       SOURCE #_TableDescription
         #/// <summary>
-        #///     Table stores project members.
+        #///     The AXI_ProjectMembers table contains members associated to a project.
         #/// </summary>
         #///
         #/// <remarks>

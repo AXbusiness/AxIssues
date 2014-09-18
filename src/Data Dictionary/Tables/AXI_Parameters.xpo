@@ -13,8 +13,13 @@ Formatversion: 1
       Name                #AXI_Parameters
       Label               #AxIssues module parameters
       CreateRecIdIndex    #Yes
-      PrimaryIndex        #SurrogateKey
-      ClusterIndex        #SurrogateKey
+      PrimaryIndex        #Key
+      ClusterIndex        #Key
+      ModifiedDateTime    #Yes
+      ModifiedBy          #Yes
+      CreatedDateTime     #Yes
+      CreatedBy           #Yes
+      DeveloperDocumentation  #The AXI_Parameters table contains values for various AxIssues module settings.
       Origin              #{3EE14A5D-BDAB-45B1-B18E-AB0E2F9C4CE3}
     ENDPROPERTIES
     
@@ -23,6 +28,7 @@ Formatversion: 1
         INT
         PROPERTIES
           Name                #Key
+          Mandatory           #Yes
           AllowEditOnCreate   #No
           AllowEdit           #No
           Visible             #No
@@ -33,9 +39,30 @@ Formatversion: 1
         
     ENDFIELDS
     GROUPS
+      GROUP #AutoIdentification
+        PROPERTIES
+          Name                #AutoIdentification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Key
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES
+      #Key
+      PROPERTIES
+        Name                #Key
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{FA3607C4-854C-44E2-82A3-D9F871E64850}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #Key
+      ENDINDEXFIELDS
+      
     ENDINDICES
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
@@ -48,7 +75,7 @@ Formatversion: 1
     METHODS
       SOURCE #_TableDescription
         #/// <summary>
-        #///     Table stores AxIssues module parameters.
+        #///     The AXI_Parameters table contains values for various AxIssues module settings.
         #/// </summary>
         #///
         #/// <remarks>

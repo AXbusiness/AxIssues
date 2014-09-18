@@ -41,6 +41,7 @@ Formatversion: 1
         STRING
         PROPERTIES
           Name                #UserId
+          Mandatory           #Yes
           Table               #AXI_Users
           Origin              #{3B2AFB19-987D-469D-B51C-8AE545572F49}
           ExtendedDataType    #UserId

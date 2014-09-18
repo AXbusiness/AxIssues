@@ -59,6 +59,7 @@ Formatversion: 1
         INT
         PROPERTIES
           Name                #ProjectId
+          Mandatory           #Yes
           Table               #AXI_Projects
           Origin              #{3273ED05-1CA5-483B-8380-04C0B26008A5}
           ExtendedDataType    #AXI_ProjectId

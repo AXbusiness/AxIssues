@@ -15,6 +15,11 @@ Formatversion: 1
       CreateRecIdIndex    #Yes
       PrimaryIndex        #SurrogateKey
       ClusterIndex        #SurrogateKey
+      ModifiedDateTime    #Yes
+      ModifiedBy          #Yes
+      CreatedDateTime     #Yes
+      CreatedBy           #Yes
+      DeveloperDocumentation  #The AXI_ProjectVersions table contains project versions.
       Origin              #{658A17EA-2638-4CED-ACA0-5E7234FC9692}
     ENDPROPERTIES
     
@@ -52,6 +57,7 @@ Formatversion: 1
         INT
         PROPERTIES
           Name                #ProjectId
+          Mandatory           #Yes
           Table               #AXI_ProjectVersions
           Origin              #{4CB23107-4C82-4FC9-98A2-A484CDD85593}
           ExtendedDataType    #AXI_ProjectId
@@ -70,6 +76,7 @@ Formatversion: 1
         STRING
         PROPERTIES
           Name                #Version
+          Mandatory           #Yes
           Table               #AXI_ProjectVersions
           Origin              #{39C21FEF-123E-4915-83EF-939103ABA568}
           ExtendedDataType    #AXI_ProjectVersion
@@ -77,13 +84,54 @@ Formatversion: 1
         
     ENDFIELDS
     GROUPS
+      GROUP #GridOverview
+        PROPERTIES
+          Name                #GridOverview
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Name
+          #Version
+          #PlannedReleaseDate
+          #ReleaseDate
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES
+      #IdentificationIdx
+      PROPERTIES
+        Name                #IdentificationIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{F458E606-3B3A-4F31-8C5D-E0A2F943E434}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #ProjectId
+        #Version
+      ENDINDEXFIELDS
+      
     ENDINDICES
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
     REFERENCES
+      REFERENCE #AXI_Projects
+        PROPERTIES
+          Name                #AXI_Projects
+          Table               #AXI_Projects
+          UseDefaultRoleNames #Yes
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE NORMAL
+          PROPERTIES
+            Field               #ProjectId
+            RelatedField        #ProjectId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
     ENDREFERENCES
     
     DELETEACTIONS
@@ -92,7 +140,7 @@ Formatversion: 1
     METHODS
       SOURCE #_TableDescription
         #/// <summary>
-        #///     Table stores project versions.
+        #///     The AXI_ProjectVersions table contains project versions.
         #/// </summary>
         #///
         #/// <remarks>

@@ -40,6 +40,7 @@ Formatversion: 1
         INT
         PROPERTIES
           Name                #IssueId
+          Mandatory           #Yes
           Table               #AXI_Issues
           Origin              #{D3304131-9A91-4712-91D7-04268B13CED3}
           ExtendedDataType    #AXI_IssueId
@@ -164,6 +165,23 @@ Formatversion: 1
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
     REFERENCES
+      REFERENCE #AXI_Projects
+        PROPERTIES
+          Name                #AXI_Projects
+          Table               #AXI_Projects
+          RelationshipType    #Association
+          UseDefaultRoleNames #Yes
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE NORMAL
+          PROPERTIES
+            Field               #ProjectId
+            RelatedField        #ProjectId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
     ENDREFERENCES
     
     DELETEACTIONS

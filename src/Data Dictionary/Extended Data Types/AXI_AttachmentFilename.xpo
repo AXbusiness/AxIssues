@@ -1,0 +1,32 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: UTS
+
+; Microsoft Dynamics AX String: AXI_AttachmentFilename unloaded
+; --------------------------------------------------------------------------------
+  USERTYPEVERSION 6
+  
+  USERTYPE #AXI_AttachmentFilename
+  STRING
+    PROPERTIES
+      Name                #AXI_AttachmentFilename
+      ButtonImage         #OpenFile
+      Origin              #{6D7D5269-1320-415B-BA53-CD384532B41F}
+      Extends             #Filename
+      StringSize          #259
+    ENDPROPERTIES
+    
+    TYPEELEMENTS
+    ENDTYPEELEMENTS
+    
+    TYPEREFERENCES
+    ENDTYPEREFERENCES
+    
+    TYPELOOKUPS
+    ENDTYPELOOKUPS
+    
+  ENDUSERTYPE
+  
+
+***Element: END

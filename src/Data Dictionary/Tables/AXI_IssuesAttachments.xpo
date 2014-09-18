@@ -13,8 +13,13 @@ Formatversion: 1
       Name                #AXI_IssuesAttachments
       Label               #Issue attachments
       CreateRecIdIndex    #Yes
-      PrimaryIndex        #SurrogateKey
+      PrimaryIndex        #IdentificationIdx
       ClusterIndex        #SurrogateKey
+      ModifiedDateTime    #Yes
+      ModifiedBy          #Yes
+      CreatedDateTime     #Yes
+      CreatedBy           #Yes
+      DeveloperDocumentation  #The AXI_IssuesAttachments table contains attachments associated to issues.
       Origin              #{10C9F3CB-FD15-4BB5-A3FC-383BC0B97C20}
     ENDPROPERTIES
     
@@ -23,6 +28,7 @@ Formatversion: 1
         INT
         PROPERTIES
           Name                #AttachmentId
+          Mandatory           #Yes
           Table               #AXI_IssuesAttachments
           Origin              #{903D7311-6135-4894-99A7-A2659C037347}
           ExtendedDataType    #AXI_AttachmentId
@@ -35,6 +41,16 @@ Formatversion: 1
           Table               #AXI_IssuesAttachments
           Origin              #{3953D59A-A9E5-4A58-9919-55C9241D294D}
           ExtendedDataType    #AXI_AttachmentData
+        ENDPROPERTIES
+        
+      FIELD #Filename
+        STRING
+        PROPERTIES
+          Name                #Filename
+          Table               #AXI_IssuesAttachments
+          Origin              #{80372B92-F876-4867-9590-28822497927C}
+          ExtendedDataType    #AXI_AttachmentFilename
+          StringSize          #259
         ENDPROPERTIES
         
       FIELD #FileType
@@ -57,13 +73,62 @@ Formatversion: 1
         
     ENDFIELDS
     GROUPS
+      GROUP #AutoIdentification
+        PROPERTIES
+          Name                #AutoIdentification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #AttachmentId
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #GridOverview
+        PROPERTIES
+          Name                #GridOverview
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #AttachmentId
+          #FileType
+          #createdBy
+          #createdDateTime
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES
+      #IdentificationIdx
+      PROPERTIES
+        Name                #IdentificationIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
+        Origin              #{9275CC91-A4EA-453A-A32D-4255B224B63C}
+      ENDPROPERTIES
+      
+      INDEXFIELDS
+        #AttachmentId
+      ENDINDEXFIELDS
+      
     ENDINDICES
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
     REFERENCES
+      REFERENCE #AXI_Issues
+        PROPERTIES
+          Name                #AXI_Issues
+          Table               #AXI_Issues
+          UseDefaultRoleNames #Yes
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE NORMAL
+          PROPERTIES
+            Field               #IssueId
+            RelatedField        #IssueId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
     ENDREFERENCES
     
     DELETEACTIONS
@@ -72,7 +137,7 @@ Formatversion: 1
     METHODS
       SOURCE #_TableDescription
         #/// <summary>
-        #///     Table stores issue attachments.
+        #///     The AXI_IssuesAttachments table contains attachments associated to issues.
         #/// </summary>
         #///
         #/// <remarks>

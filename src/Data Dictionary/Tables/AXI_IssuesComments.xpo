@@ -13,8 +13,13 @@ Formatversion: 1
       Name                #AXI_IssuesComments
       Label               #Issue comments
       CreateRecIdIndex    #Yes
-      PrimaryIndex        #SurrogateKey
+      PrimaryIndex        #IdentificationIdx
       ClusterIndex        #SurrogateKey
+      ModifiedDateTime    #Yes
+      ModifiedBy          #Yes
+      CreatedDateTime     #Yes
+      CreatedBy           #Yes
+      DeveloperDocumentation  #The AXI_IssuesComments table contains comments associated to issues.
       Origin              #{7CBE6CD0-0900-4A23-9800-38C97E8244DA}
     ENDPROPERTIES
     
@@ -33,6 +38,7 @@ Formatversion: 1
         INT
         PROPERTIES
           Name                #CommentId
+          Mandatory           #Yes
           Table               #AXI_IssuesComments
           Origin              #{0B8DC5D7-DE25-4D54-ADD5-B579B6A4FAB9}
           ExtendedDataType    #AXI_CommentId
@@ -49,12 +55,35 @@ Formatversion: 1
         
     ENDFIELDS
     GROUPS
+      GROUP #AutoIdentification
+        PROPERTIES
+          Name                #AutoIdentification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #CommentId
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #GridOverview
+        PROPERTIES
+          Name                #GridOverview
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #CommentId
+          #displayCommentFirstLine
+          #createdBy
+          #createdDateTime
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES
-      #AXI_IssuesCommentsIdx
+      #IdentificationIdx
       PROPERTIES
-        Name                #AXI_IssuesCommentsIdx
+        Name                #IdentificationIdx
+        AllowDuplicates     #No
+        AlternateKey        #Yes
         Origin              #{F2A51C80-AC19-4860-99C7-ECEAEB4DDF33}
       ENDPROPERTIES
       
@@ -66,6 +95,22 @@ Formatversion: 1
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
     REFERENCES
+      REFERENCE #AXI_Issues
+        PROPERTIES
+          Name                #AXI_Issues
+          Table               #AXI_Issues
+          UseDefaultRoleNames #Yes
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE NORMAL
+          PROPERTIES
+            Field               #IssueId
+            RelatedField        #IssueId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
     ENDREFERENCES
     
     DELETEACTIONS
@@ -74,7 +119,7 @@ Formatversion: 1
     METHODS
       SOURCE #_TableDescription
         #/// <summary>
-        #///     Table stores issue comments.
+        #///     The AXI_IssuesComments table contains comments associated to issues.
         #/// </summary>
         #///
         #/// <remarks>
@@ -112,6 +157,13 @@ Formatversion: 1
         #/// </remarks>
         #private void _TableDescription()
         #{
+        #}
+      ENDSOURCE
+      SOURCE #displayCommentFirstLine
+        #display AXI_CommentFirstLine displayCommentFirstLine()
+        #{
+        #    //TODO: Implement
+        #    return '.....';
         #}
       ENDSOURCE
     ENDMETHODS

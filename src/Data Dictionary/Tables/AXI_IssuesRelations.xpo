@@ -30,6 +30,7 @@ Formatversion: 1
         INT
         PROPERTIES
           Name                #IssueId
+          Mandatory           #Yes
           Table               #AXI_IssuesRelations
           Origin              #{E31718D9-BB49-4570-9417-FF0CA99CCD3D}
           ExtendedDataType    #AXI_IssueId
@@ -39,6 +40,7 @@ Formatversion: 1
         INT
         PROPERTIES
           Name                #RelatedIssueId
+          Mandatory           #Yes
           Table               #AXI_IssuesRelations
           Origin              #{02BDFEA3-CF2C-4D60-B260-393C805D7261}
           ExtendedDataType    #AXI_RelatedIssueId
@@ -87,6 +89,46 @@ Formatversion: 1
     FULLTEXTINDICES
     ENDFULLTEXTINDICES
     REFERENCES
+      REFERENCE #AXI_Issues
+        PROPERTIES
+          Name                #AXI_Issues
+          Table               #AXI_Issues
+          RelatedTableCardinality   #ZeroOne
+          RelationshipType    #Association
+          UseDefaultRoleNames #Yes
+          RelatedTableRole    #AXI_Issues_1
+          Role                #AXI_Issues
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE NORMAL
+          PROPERTIES
+            Field               #IssueId
+            RelatedField        #IssueId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
+      REFERENCE #AXI_IssuesRelated
+        PROPERTIES
+          Name                #AXI_IssuesRelated
+          Table               #AXI_Issues
+          RelatedTableCardinality   #ZeroOne
+          RelationshipType    #Association
+          UseDefaultRoleNames #Yes
+          RelatedTableRole    #AXI_Issues_2
+          Role                #AXI_Issues
+        ENDPROPERTIES
+        
+        FIELDREFERENCES
+          REFERENCETYPE NORMAL
+          PROPERTIES
+            Field               #RelatedIssueId
+            RelatedField        #IssueId
+          ENDPROPERTIES
+          
+        ENDFIELDREFERENCES
+      ENDREFERENCE
     ENDREFERENCES
     
     DELETEACTIONS

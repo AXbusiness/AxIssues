@@ -1,0 +1,558 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FRM
+
+; Microsoft Dynamics AX Forms unloaded
+; --------------------------------------------------------------------------------
+FRMVERSION 12
+
+FORM #AXI_Projects
+  PROPERTIES
+    Name                #AXI_Projects
+    Origin              #{2893DA43-9B30-4602-8F3B-F4D933C1C0C9}
+  ENDPROPERTIES
+  
+  METHODS
+    SOURCE #classDeclaration
+      #/// <summary>
+      #///     Form for managing AXI_Projects table.
+      #/// </summary>
+      #///
+      #/// <remarks>
+      #///     Project.....: AX Issues
+      #///     Author......: Stefan Ebert (AXBusiness@gmx.de)
+      #///     Source code.: https://github.com/AXbusiness/AxIssues
+      #///     License.....: MIT license
+      #///
+      #///     --------------------------------------------------------------------------------
+      #///
+      #///     The MIT License (MIT)
+      #///
+      #///     Copyright (c) 2014 Stefan Ebert
+      #///
+      #///     Permission is hereby granted, free of charge, to any person obtaining a copy
+      #///     of this software and associated documentation files (the "Software"), to deal
+      #///     in the Software without restriction, including without limitation the rights
+      #///     to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+      #///     copies of the Software, and to permit persons to whom the Software is
+      #///     furnished to do so, subject to the following conditions:
+      #///
+      #///     The above copyright notice and this permission notice shall be included in all
+      #///     copies or substantial portions of the Software.
+      #///
+      #///     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+      #///     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+      #///     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+      #///     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+      #///     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+      #///     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+      #///     SOFTWARE.
+      #///
+      #///     --------------------------------------------------------------------------------
+      #///
+      #/// </remarks>
+      #public class FormRun extends ObjectRun
+      #{
+      #    SysFormSplitter_X verticalSplitter;
+      #}
+    ENDSOURCE
+    SOURCE #init
+      #public void init()
+      #{
+      #    super();
+      #    //Initialize splitter
+      #    verticalSplitter = new SysFormSplitter_X(VSplitter, GridContainer, element, 300);
+      #}
+    ENDSOURCE
+  ENDMETHODS
+  OBJECTBANK
+    PROPERTIES
+    ENDPROPERTIES
+    
+    DATASOURCE
+      OBJECTPOOL
+        PROPERTIES
+          Name                #AXI_Projects
+          Table               #AXI_Projects
+        ENDPROPERTIES
+        
+        FIELDLIST
+        ENDFIELDLIST
+      ENDOBJECTPOOL
+      METHODS
+      ENDMETHODS
+    ENDDATASOURCE
+  ENDOBJECTBANK
+  
+  REFERENCEDATASOURCES
+  ENDREFERENCEDATASOURCES
+  
+  JOINS
+  ENDJOINS
+  
+  PARTREFERENCES
+  ENDPARTREFERENCES
+  
+  DESIGN
+    PROPERTIES
+      Caption             #Projects
+      TitleDatasource     #AXI_Projects
+      Style               #SimpleListDetails
+    ENDPROPERTIES
+    
+    CONTAINER
+      CONTROL ACTIONPANE
+        PROPERTIES
+          Name                #ActionPane
+          ElementPosition     #429496729
+          Style               #Strip
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL ACTIONPANETAB
+        PROPERTIES
+          Name                #ActionPaneTab
+          ElementPosition     #1431655764
+          HierarchyParent     #ActionPane
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL BUTTONGROUP
+        PROPERTIES
+          Name                #RecordBasics
+          ElementPosition     #1431655764
+          HierarchyParent     #ActionPaneTab
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GRID
+        PROPERTIES
+          Name                #Grid
+          AllowEdit           #No
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1431655764
+          HierarchyParent     #GridContainer
+          MultiSelect         #No
+          ShowRowLabels       #No
+          DataSource          #AXI_Projects
+          GridLinesStyle      #Vertical
+          AlternateRowShading #No
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #Body
+          ElementPosition     #1717986916
+          Style               #MarginlessContainer
+          Columns             #3
+          Columnspace         #0
+          ArrangeGuide        
+            ARRAY INDEX Columns 
+              #0
+              #0
+              #0
+            ENDARRAY
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #CustomFilterGroup
+          Visible             #No
+          ElementPosition     #1288490187
+          Style               #DetailTitleContainer
+          AlignChild          #No
+          ViewEditMode        #Edit
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #DetailsContainer
+          ElementPosition     #1717986916
+          HierarchyParent     #Body
+          Style               #MarginlessContainer
+          TopMargin           #5
+          RightMargin         #5
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #DetailsHeader
+          Visible             #No
+          ElementPosition     #1073741822
+          HierarchyParent     #DetailsContainer
+          FrameType           #None
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #GridContainer
+          AutoDeclaration     #Yes
+          Width               #300
+          ElementPosition     #858993458
+          HierarchyParent     #Body
+          Style               #BorderlessGridContainer
+          RightMargin         #0
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #GridOverview
+          ElementPosition     #1431655764
+          HierarchyParent     #Grid
+          BackgroundColor     #Window background
+          DataSource          #AXI_Projects
+          DataGroup           #GridOverview
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #PageTitleGroup
+          Visible             #No
+          ElementPosition     #858993458
+          Style               #DetailTitleContainer
+          AlignChild          #No
+          ViewEditMode        #View
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL GROUP
+        PROPERTIES
+          Name                #VSplitter
+          AutoDeclaration     #Yes
+          ElementPosition     #1288490187
+          HierarchyParent     #Body
+          Style               #SplitterVerticalContainer
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL TAB
+        PROPERTIES
+          Name                #DetailsTab
+          Width               #Column width
+          Height              #Column height
+          ElementPosition     #1610612733
+          HierarchyParent     #DetailsContainer
+          Style               #FastTabs
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL TABPAGE
+        PROPERTIES
+          Name                #TabPage_General
+          ElementPosition     #1288490187
+          HierarchyParent     #DetailsTab
+          Caption             #General
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL TABPAGE
+        PROPERTIES
+          Name                #TabPage_Identification
+          ElementPosition     #858993458
+          HierarchyParent     #DetailsTab
+          Caption             #Identification
+          Columns             #2
+          ArrangeGuide        
+            ARRAY INDEX Columns 
+              #0
+              #0
+            ENDARRAY
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL TABPAGE
+        PROPERTIES
+          Name                #TabPage_Meta
+          ElementPosition     #1717986916
+          HierarchyParent     #DetailsTab
+          Caption             #Meta information
+          Columns             #2
+          ArrangeGuide        
+            ARRAY INDEX Columns 
+              #0
+              #0
+            ENDARRAY
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMMANDBUTTON
+        PROPERTIES
+          Name                #DeleteButton
+          ElementPosition     #1610612733
+          HierarchyParent     #RecordBasics
+          Text                #@SYS14425
+          ButtonDisplay       #Text & Image left
+          NormalImage         #10121
+          ImageLocation       #EmbeddedResource
+          SaveRecord          #No
+          Primary             #Yes
+          Command             #2832
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL COMMANDBUTTON
+        PROPERTIES
+          Name                #NewButton
+          ElementPosition     #1073741822
+          HierarchyParent     #RecordBasics
+          ButtonDisplay       #Text & Image left
+          NormalImage         #11045
+          ImageLocation       #EmbeddedResource
+          Primary             #Yes
+          Command             #260
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL INTEDIT
+        PROPERTIES
+          Name                #AXI_Projects_ProjectId
+          ElementPosition     #1431655764
+          HierarchyParent     #TabPage_Identification
+          DataSource          #AXI_Projects
+          DataField           #ProjectId
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #AXI_Projects_createdBy
+          ElementPosition     #715827882
+          HierarchyParent     #TabPage_Meta
+          DataSource          #AXI_Projects
+          DataField           #createdBy
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #AXI_Projects_CurrentVersion
+          ElementPosition     #1288490187
+          HierarchyParent     #TabPage_General
+          DataSource          #AXI_Projects
+          DataField           #CurrentVersion
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #AXI_Projects_Description
+          ElementPosition     #1717986916
+          HierarchyParent     #TabPage_General
+          DataSource          #AXI_Projects
+          DataField           #Description
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #AXI_Projects_modifiedBy
+          ElementPosition     #1431655764
+          HierarchyParent     #TabPage_Meta
+          DataSource          #AXI_Projects
+          DataField           #modifiedBy
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #AXI_Projects_Name
+          ElementPosition     #858993458
+          HierarchyParent     #TabPage_General
+          DataSource          #AXI_Projects
+          DataField           #Name
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL UTCDATETIMEEDIT
+        PROPERTIES
+          Name                #AXI_Projects_createdDateTime
+          ElementPosition     #1073741823
+          HierarchyParent     #TabPage_Meta
+          DataSource          #AXI_Projects
+          DataField           #createdDateTime
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL UTCDATETIMEEDIT
+        PROPERTIES
+          Name                #AXI_Projects_modifiedDateTime
+          ElementPosition     #1789569705
+          HierarchyParent     #TabPage_Meta
+          DataSource          #AXI_Projects
+          DataField           #modifiedDateTime
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+    ENDCONTAINER
+    
+  ENDDESIGN
+  
+  PERMISSIONS #Permissions
+    PROPERTIES
+    ENDPROPERTIES
+    
+    PERMISSIONSET #Read
+      PROPERTIES
+      ENDPROPERTIES
+      
+      FORM #Controls
+      ENDFORM
+      
+    TABLES #Tables
+    ENDTABLES
+    
+  SERVERMETHODS #Server Methods
+  ENDSERVERMETHODS
+  
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Update
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Create
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+PERMISSIONSET #Delete
+  PROPERTIES
+  ENDPROPERTIES
+  
+  FORM #Controls
+  ENDFORM
+  
+TABLES #Tables
+ENDTABLES
+
+SERVERMETHODS #Server Methods
+ENDSERVERMETHODS
+
+ASSOCIATEDFORMS #Associated Forms
+ENDASSOCIATEDFORMS
+
+ENDPERMISSIONSET
+
+ENDPERMISSIONS
+
+ENDFORM
+
+
+***Element: END

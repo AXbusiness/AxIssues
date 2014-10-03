@@ -68,6 +68,13 @@ Formatversion: 1
         ENDPROPERTIES
         
       ENDMENUITEM
+      MENUITEM
+        PROPERTIES
+          Name                #Projects
+          MenuItemName        #AXI_Projects
+        ENDPROPERTIES
+        
+      ENDMENUITEM
     ENDMENU
   ENDMENU
   

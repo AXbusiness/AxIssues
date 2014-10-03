@@ -62,7 +62,7 @@ MS6 - Deploy
 Environment
 ===========
 
-IDE used is Microsoft Dynamics AX 2012 IDE.
+IDE used is Microsoft Dynamics AX 2012-R3 IDE.
 Programming language is X++.
 
 Tools

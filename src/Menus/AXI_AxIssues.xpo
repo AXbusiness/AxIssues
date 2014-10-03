@@ -23,7 +23,6 @@ Formatversion: 1
         Label               #@SYS333846
         NormalImage         #3495
         ImageLocation       #EmbeddedResource
-        Origin              #{81A38BA3-5433-431E-BEEF-83D7F3C4CFD9}
       ENDPROPERTIES
       
     ENDMENU
@@ -33,7 +32,6 @@ Formatversion: 1
         Label               #@SYS333856
         NormalImage         #3474
         ImageLocation       #EmbeddedResource
-        Origin              #{6A964506-EA3A-4635-89E4-C578D7D658BD}
       ENDPROPERTIES
       
     ENDMENU
@@ -43,7 +41,6 @@ Formatversion: 1
         Label               #@SYS333860
         NormalImage         #3477
         ImageLocation       #EmbeddedResource
-        Origin              #{3898BEAA-F958-4981-8A7E-0185DF648DA5}
       ENDPROPERTIES
       
     ENDMENU
@@ -53,7 +50,6 @@ Formatversion: 1
         Label               #@SYS333865
         NormalImage         #3476
         ImageLocation       #EmbeddedResource
-        Origin              #{4A08FA85-FFDD-48A9-8A5A-8362CBFBE0D5}
       ENDPROPERTIES
       
     ENDMENU
@@ -63,7 +59,6 @@ Formatversion: 1
         Label               #@SYS333869
         NormalImage         #3478
         ImageLocation       #EmbeddedResource
-        Origin              #{A5EA2F6E-A066-4778-805D-FCC8825C3B83}
       ENDPROPERTIES
       
       MENUITEM

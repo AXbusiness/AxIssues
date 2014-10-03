@@ -104,7 +104,7 @@ FORM #AXI_Users
       CONTROL ACTIONPANE
         PROPERTIES
           Name                #ActionPane
-          ElementPosition     #429496729
+          ElementPosition     #536870911
           Style               #Strip
         ENDPROPERTIES
         
@@ -154,7 +154,7 @@ FORM #AXI_Users
       CONTROL GROUP
         PROPERTIES
           Name                #GridContainer
-          ElementPosition     #1717986916
+          ElementPosition     #1610612733
           Style               #BorderlessGridContainer
         ENDPROPERTIES
         

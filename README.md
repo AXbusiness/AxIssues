@@ -1,7 +1,7 @@
 AxIssues
 ========
 
-(c) 2014, Stefan Ebert
+(c) 2014, 2015, Stefan Ebert
 
 Dynamics AX 2012 issue tracker. Intended for usage directly in development or integration system.
 Uses internal database for storage. Provides export, import and converting funcionality.
@@ -63,9 +63,15 @@ Environment
 ===========
 
 IDE used is Microsoft Dynamics AX 2012-R3 IDE.
+Modelling tool used is StarUML 2.
 Programming language is X++.
 
 Tools
 =====
 
 To get Dynamics AX elements file-based and suitable for version control, the "AOTExportSeparated" Tool from [Aaron Kunz](https://github.com/DAXaholic) is used, which is located at: https://github.com/DAXaholic/AOTExportSeparated
+
+ER Diagram
+==========
+
+![](pic/ERsplash.png)

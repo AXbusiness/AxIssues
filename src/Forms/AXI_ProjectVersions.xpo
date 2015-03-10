@@ -7,16 +7,16 @@ Formatversion: 1
 ; --------------------------------------------------------------------------------
 FRMVERSION 12
 
-FORM #AXI_Projects
+FORM #AXI_ProjectVersions
   PROPERTIES
-    Name                #AXI_Projects
-    Origin              #{2893DA43-9B30-4602-8F3B-F4D933C1C0C9}
+    Name                #AXI_ProjectVersions
+    Origin              #{2341A5CF-DB75-4B70-8481-42E6C102CC14}
   ENDPROPERTIES
   
   METHODS
     SOURCE #classDeclaration
       #/// <summary>
-      #///     Form for managing AXI_Projects table.
+      #///     Form for managing project versions.
       #/// </summary>
       #///
       #/// <remarks>
@@ -29,7 +29,7 @@ FORM #AXI_Projects
       #///
       #///     The MIT License (MIT)
       #///
-      #///     Copyright (c) 2014 Stefan Ebert
+      #///     Copyright (c) 2014, 2015 Stefan Ebert
       #///
       #///     Permission is hereby granted, free of charge, to any person obtaining a copy
       #///     of this software and associated documentation files (the "Software"), to deal
@@ -73,11 +73,20 @@ FORM #AXI_Projects
     DATASOURCE
       OBJECTPOOL
         PROPERTIES
-          Name                #AXI_Projects
-          Table               #AXI_Projects
+          Name                #AXI_ProjectVersions
+          Table               #AXI_ProjectVersions
         ENDPROPERTIES
         
         FIELDLIST
+          DATAFIELD ProjectId
+            PROPERTIES
+              AllowEdit           #No
+            ENDPROPERTIES
+            
+            METHODS
+            ENDMETHODS
+          ENDDATAFIELD
+          
         ENDFIELDLIST
       ENDOBJECTPOOL
       METHODS
@@ -96,8 +105,8 @@ FORM #AXI_Projects
   
   DESIGN
     PROPERTIES
-      Caption             #Projects
-      TitleDatasource     #AXI_Projects
+      Caption             #Project versions
+      TitleDatasource     #AXI_ProjectVersions
       Style               #SimpleListDetails
     ENDPROPERTIES
     
@@ -126,17 +135,6 @@ FORM #AXI_Projects
       
       CONTROL BUTTONGROUP
         PROPERTIES
-          Name                #ButtonGroup
-          ElementPosition     #1789569705
-          HierarchyParent     #ActionPaneTab
-        ENDPROPERTIES
-        
-        METHODS
-        ENDMETHODS
-      ENDCONTROL 
-      
-      CONTROL BUTTONGROUP
-        PROPERTIES
           Name                #RecordBasics
           ElementPosition     #1431655764
           HierarchyParent     #ActionPaneTab
@@ -156,7 +154,7 @@ FORM #AXI_Projects
           HierarchyParent     #GridContainer
           MultiSelect         #No
           ShowRowLabels       #No
-          DataSource          #AXI_Projects
+          DataSource          #AXI_ProjectVersions
           GridLinesStyle      #Vertical
           AlternateRowShading #No
         ENDPROPERTIES
@@ -215,7 +213,6 @@ FORM #AXI_Projects
       CONTROL GROUP
         PROPERTIES
           Name                #DetailsHeader
-          Visible             #No
           ElementPosition     #1073741822
           HierarchyParent     #DetailsContainer
           FrameType           #None
@@ -246,7 +243,7 @@ FORM #AXI_Projects
           ElementPosition     #1431655764
           HierarchyParent     #Grid
           BackgroundColor     #Window background
-          DataSource          #AXI_Projects
+          DataSource          #AXI_ProjectVersions
           DataGroup           #GridOverview
         ENDPROPERTIES
         
@@ -297,10 +294,16 @@ FORM #AXI_Projects
       
       CONTROL TABPAGE
         PROPERTIES
-          Name                #TabPage_General
+          Name                #TabPage_Dates
           ElementPosition     #1288490187
           HierarchyParent     #DetailsTab
-          Caption             #General
+          Caption             #Dates
+          Columns             #2
+          ArrangeGuide        
+            ARRAY INDEX Columns 
+              #0
+              #0
+            ENDARRAY
         ENDPROPERTIES
         
         METHODS
@@ -309,16 +312,10 @@ FORM #AXI_Projects
       
       CONTROL TABPAGE
         PROPERTIES
-          Name                #TabPage_Identification
+          Name                #TabPage_General
           ElementPosition     #858993458
           HierarchyParent     #DetailsTab
-          Caption             #Identification
-          Columns             #2
-          ArrangeGuide        
-            ARRAY INDEX Columns 
-              #0
-              #0
-            ENDARRAY
+          Caption             #General
         ENDPROPERTIES
         
         METHODS
@@ -377,25 +374,39 @@ FORM #AXI_Projects
         ENDMETHODS
       ENDCONTROL 
       
-      CONTROL INTEDIT
+      CONTROL DATEEDIT
         PROPERTIES
-          Name                #AXI_Projects_ProjectId
-          ElementPosition     #1431655764
-          HierarchyParent     #TabPage_Identification
-          DataSource          #AXI_Projects
-          DataField           #ProjectId
+          Name                #AXI_ProjectVersions_PlannedReleaseDate
+          ElementPosition     #1073741822
+          HierarchyParent     #TabPage_Dates
+          DataSource          #AXI_ProjectVersions
+          DataField           #PlannedReleaseDate
         ENDPROPERTIES
         
         METHODS
         ENDMETHODS
       ENDCONTROL 
       
-      CONTROL MENUITEMBUTTON
+      CONTROL DATEEDIT
         PROPERTIES
-          Name                #AXI_ProjectVersions
-          ElementPosition     #1431655764
-          HierarchyParent     #ButtonGroup
-          MenuItemName        #AXI_ProjectVersions
+          Name                #AXI_ProjectVersions_ReleaseDate
+          ElementPosition     #1610612733
+          HierarchyParent     #TabPage_Dates
+          DataSource          #AXI_ProjectVersions
+          DataField           #ReleaseDate
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL INTEDIT
+        PROPERTIES
+          Name                #AXI_ProjectVersions_ProjectId
+          ElementPosition     #536870910
+          HierarchyParent     #TabPage_General
+          DataSource          #AXI_ProjectVersions
+          DataField           #ProjectId
         ENDPROPERTIES
         
         METHODS
@@ -404,10 +415,10 @@ FORM #AXI_Projects
       
       CONTROL STRINGEDIT
         PROPERTIES
-          Name                #AXI_Projects_createdBy
+          Name                #AXI_ProjectVersions_createdBy
           ElementPosition     #715827882
           HierarchyParent     #TabPage_Meta
-          DataSource          #AXI_Projects
+          DataSource          #AXI_ProjectVersions
           DataField           #createdBy
         ENDPROPERTIES
         
@@ -417,23 +428,10 @@ FORM #AXI_Projects
       
       CONTROL STRINGEDIT
         PROPERTIES
-          Name                #AXI_Projects_CurrentVersion
-          ElementPosition     #1288490187
+          Name                #AXI_ProjectVersions_Description
+          ElementPosition     #1431655764
           HierarchyParent     #TabPage_General
-          DataSource          #AXI_Projects
-          DataField           #CurrentVersion
-        ENDPROPERTIES
-        
-        METHODS
-        ENDMETHODS
-      ENDCONTROL 
-      
-      CONTROL STRINGEDIT
-        PROPERTIES
-          Name                #AXI_Projects_Description
-          ElementPosition     #1073741822
-          HierarchyParent     #TabPage_General
-          DataSource          #AXI_Projects
+          DataSource          #AXI_ProjectVersions
           DataField           #Description
         ENDPROPERTIES
         
@@ -443,10 +441,10 @@ FORM #AXI_Projects
       
       CONTROL STRINGEDIT
         PROPERTIES
-          Name                #AXI_Projects_modifiedBy
+          Name                #AXI_ProjectVersions_modifiedBy
           ElementPosition     #1431655764
           HierarchyParent     #TabPage_Meta
-          DataSource          #AXI_Projects
+          DataSource          #AXI_ProjectVersions
           DataField           #modifiedBy
         ENDPROPERTIES
         
@@ -456,11 +454,24 @@ FORM #AXI_Projects
       
       CONTROL STRINGEDIT
         PROPERTIES
-          Name                #AXI_Projects_Name
-          ElementPosition     #858993458
+          Name                #AXI_ProjectVersions_Name
+          ElementPosition     #1073741823
           HierarchyParent     #TabPage_General
-          DataSource          #AXI_Projects
+          DataSource          #AXI_ProjectVersions
           DataField           #Name
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL STRINGEDIT
+        PROPERTIES
+          Name                #AXI_ProjectVersions_Version
+          ElementPosition     #805306365
+          HierarchyParent     #TabPage_General
+          DataSource          #AXI_ProjectVersions
+          DataField           #Version
         ENDPROPERTIES
         
         METHODS
@@ -469,10 +480,10 @@ FORM #AXI_Projects
       
       CONTROL UTCDATETIMEEDIT
         PROPERTIES
-          Name                #AXI_Projects_createdDateTime
+          Name                #AXI_ProjectVersions_createdDateTime
           ElementPosition     #1073741823
           HierarchyParent     #TabPage_Meta
-          DataSource          #AXI_Projects
+          DataSource          #AXI_ProjectVersions
           DataField           #createdDateTime
         ENDPROPERTIES
         
@@ -482,10 +493,10 @@ FORM #AXI_Projects
       
       CONTROL UTCDATETIMEEDIT
         PROPERTIES
-          Name                #AXI_Projects_modifiedDateTime
+          Name                #AXI_ProjectVersions_modifiedDateTime
           ElementPosition     #1789569705
           HierarchyParent     #TabPage_Meta
-          DataSource          #AXI_Projects
+          DataSource          #AXI_ProjectVersions
           DataField           #modifiedDateTime
         ENDPROPERTIES
         

@@ -12,6 +12,8 @@ Formatversion: 1
     PROPERTIES
       Name                #AXI_ProjectMembers
       Label               #Project members
+      TitleField1         #UserId
+      TitleField2         #Role
       CreateRecIdIndex    #Yes
       PrimaryIndex        #SurrogateKey
       ClusterIndex        #SurrogateKey

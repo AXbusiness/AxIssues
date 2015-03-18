@@ -1,0 +1,22 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : AXI_ProjectMembers unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #AXI_ProjectMembers
+    Type: 1
+    PROPERTIES
+      Name                #AXI_ProjectMembers
+      Label               #Project members
+      Object              #AXI_ProjectMembers
+      Origin              #{F48053B7-7E53-462F-A7F5-9E1B35E2B891}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

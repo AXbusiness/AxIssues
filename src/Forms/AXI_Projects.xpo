@@ -392,6 +392,18 @@ FORM #AXI_Projects
       
       CONTROL MENUITEMBUTTON
         PROPERTIES
+          Name                #AXI_ProjectMembers
+          ElementPosition     #1789569705
+          HierarchyParent     #ButtonGroup
+          MenuItemName        #AXI_ProjectMembers
+        ENDPROPERTIES
+        
+        METHODS
+        ENDMETHODS
+      ENDCONTROL 
+      
+      CONTROL MENUITEMBUTTON
+        PROPERTIES
           Name                #AXI_ProjectVersions
           ElementPosition     #1431655764
           HierarchyParent     #ButtonGroup

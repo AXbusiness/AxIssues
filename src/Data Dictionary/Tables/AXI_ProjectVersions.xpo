@@ -12,6 +12,8 @@ Formatversion: 1
     PROPERTIES
       Name                #AXI_ProjectVersions
       Label               #Project versions
+      TitleField1         #Version
+      TitleField2         #Name
       CreateRecIdIndex    #Yes
       PrimaryIndex        #SurrogateKey
       ClusterIndex        #SurrogateKey

@@ -1,0 +1,22 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : AXI_Issues unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #AXI_Issues
+    Type: 1
+    PROPERTIES
+      Name                #AXI_Issues
+      Label               #Issue details
+      Object              #AXI_Issues
+      Origin              #{8D669D9C-D10A-4CD3-9B0A-C4C1016CF3CD}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

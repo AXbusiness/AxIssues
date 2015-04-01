@@ -389,6 +389,12 @@ Formatversion: 1
         FILETYPE 0
         UTILTYPE 11
         NODETYPE 201
+        NAME #AXI_Issues
+      ENDNODE
+      BEGINNODE
+        FILETYPE 0
+        UTILTYPE 11
+        NODETYPE 201
         NAME #AXI_Projects
       ENDNODE
       BEGINNODE
@@ -483,6 +489,18 @@ Formatversion: 1
           PreventEditProperties #No
         ENDPROPERTIES
         
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 1
+          NODETYPE 296
+          NAME #AXI_Issues
+        ENDNODE
+        BEGINNODE
+          FILETYPE 0
+          UTILTYPE 1
+          NODETYPE 296
+          NAME #AXI_IssuesGrid
+        ENDNODE
         BEGINNODE
           FILETYPE 0
           UTILTYPE 1

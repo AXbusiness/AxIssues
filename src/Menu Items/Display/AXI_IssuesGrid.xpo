@@ -1,0 +1,23 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: FTM
+
+; Microsoft Dynamics AX MENUITEM : AXI_IssuesGrid unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  MENUITEM #AXI_IssuesGrid
+    Type: 1
+    PROPERTIES
+      Name                #AXI_IssuesGrid
+      Label               #Issue details
+      Object              #AXI_Issues
+      FormViewOption      #Grid
+      Origin              #{A852C978-7162-48A2-BA99-6DA28EAC897F}
+    ENDPROPERTIES
+    
+  ENDMENUITEM
+  
+
+***Element: END

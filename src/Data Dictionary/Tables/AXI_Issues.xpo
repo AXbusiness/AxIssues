@@ -131,6 +131,18 @@ Formatversion: 1
           #IssueId
         ENDGROUPFIELDS
       ENDGROUP
+      GROUP #Creation
+        PROPERTIES
+          Name                #Creation
+          Label               #Creation
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #ReportedUserId
+          #createdDateTime
+          #createdBy
+        ENDGROUPFIELDS
+      ENDGROUP
       GROUP #GridOverview
         PROPERTIES
           Name                #GridOverview
@@ -144,6 +156,52 @@ Formatversion: 1
           #Resolution
           #Priority
           #ProjectId
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #Identification
+        PROPERTIES
+          Name                #Identification
+          Label               #Identification
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #IssueId
+          #Description
+          #Title
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #Project
+        PROPERTIES
+          Name                #Project
+          Label               #Project
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #ProjectId
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #Resolution
+        PROPERTIES
+          Name                #Resolution
+          Label               #Resolution
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Resolution
+        ENDGROUPFIELDS
+      ENDGROUP
+      GROUP #Status
+        PROPERTIES
+          Name                #Status
+          Label               #Status
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Status
+          #VersionFixInPlanned
+          #VersionFixed
+          #modifiedBy
+          #modifiedDateTime
         ENDGROUPFIELDS
       ENDGROUP
     ENDGROUPS
@@ -228,6 +286,27 @@ Formatversion: 1
         #/// </remarks>
         #private void _TableDescription()
         #{
+        #}
+      ENDSOURCE
+      SOURCE #title
+        #/// <summary>
+        #///    Retrieves the issue ID and issue title of current issue and combines it into a title.
+        #/// </summary>
+        #/// <returns>
+        #///    The title of the current issue.
+        #/// </returns>
+        #/// <remarks>
+        #///    This is used as the title in the issue details forms.
+        #/// </remarks>
+        #[SysClientCacheDataMethodAttribute]
+        #//BP Deviation documented
+        #public display AXI_IssueTitle title()
+        #{
+        #    AXI_IssueTitle issueTitle;
+        #
+        #    issueTitle = strFmt('%1: %2 (%3)', this.IssueId, this.Title, this.Status);
+        #
+        #    return issueTitle;
         #}
       ENDSOURCE
     ENDMETHODS

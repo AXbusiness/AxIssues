@@ -16,7 +16,7 @@ FORM #AXI_ProjectVersions
   METHODS
     SOURCE #classDeclaration
       #/// <summary>
-      #///     Form for managing project versions.
+      #///     Form for managing AXI_ProjectVersions table.
       #/// </summary>
       #///
       #/// <remarks>

@@ -25,6 +25,13 @@ Formatversion: 1
         ImageLocation       #EmbeddedResource
       ENDPROPERTIES
       
+      MENUITEM
+        PROPERTIES
+          Name                #Issue details
+          MenuItemName        #AXI_IssuesGrid
+        ENDPROPERTIES
+        
+      ENDMENUITEM
     ENDMENU
     MENU #@SYS333856
       PROPERTIES

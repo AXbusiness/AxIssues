@@ -87,6 +87,18 @@ Formatversion: 1
           #CurrentVersion
         ENDGROUPFIELDS
       ENDGROUP
+      GROUP #IssuesRelatedInformation
+        PROPERTIES
+          Name                #IssuesRelatedInformation
+          Label               #Project information
+        ENDPROPERTIES
+        
+        GROUPFIELDS
+          #Name
+          #Description
+          #CurrentVersion
+        ENDGROUPFIELDS
+      ENDGROUP
     ENDGROUPS
     
     INDICES

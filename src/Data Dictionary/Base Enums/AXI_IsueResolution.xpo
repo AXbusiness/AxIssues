@@ -16,39 +16,46 @@ Formatversion: 1
     ENDPROPERTIES
     
     TYPEELEMENTS
+      #NotSelected
+      PROPERTIES
+        Name                #NotSelected
+        Label               #---
+        EnumValue           #0
+      ENDPROPERTIES
+      
       #Fixed
       PROPERTIES
         Name                #Fixed
         Label               #Fixed
-        EnumValue           #0
+        EnumValue           #1
       ENDPROPERTIES
       
       #Duplicate
       PROPERTIES
         Name                #Duplicate
         Label               #Duplicate
-        EnumValue           #1
+        EnumValue           #2
       ENDPROPERTIES
       
       #WontFix
       PROPERTIES
         Name                #WontFix
         Label               #Won't fix
-        EnumValue           #2
+        EnumValue           #3
       ENDPROPERTIES
       
       #WorksForMe
       PROPERTIES
         Name                #WorksForMe
         Label               #Works for me
-        EnumValue           #3
+        EnumValue           #4
       ENDPROPERTIES
       
       #Invalid
       PROPERTIES
         Name                #Invalid
         Label               #Invalid
-        EnumValue           #4
+        EnumValue           #5
       ENDPROPERTIES
       
     ENDTYPEELEMENTS
